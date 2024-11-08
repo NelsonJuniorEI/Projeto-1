@@ -1,19 +1,35 @@
 @charset "UTF-8";
 *{
+    font-family: Arial, Helvetica, sans-serif;
 
 }
-header{
-
+header > h2 {
+  text-align: center;
+  background-color: grey;
+}
+section h3 h1{
+    text-align: left;
+}
+section#menu{
+    text-align: left;
 }
 nav{
 
 }
-main{
-
+main > h1 {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    display:inline-block;
+     
 }
 aside{
+  
+}
+aside#emailhome{
+    
 
 }
 footer{
-    
+
 }
