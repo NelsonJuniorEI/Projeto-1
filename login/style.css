@@ -1,10 +1,15 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
- font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- padding: 0px;
- margin: 0px;
- box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body, html{
@@ -27,7 +32,7 @@ main{
 section#login{
     background-color: white;
     text-align: center;
-    width: 500px;
+    width: 80vwpx;
     height: 500px;
     border-radius: 20px;
     position: absolute;
@@ -35,12 +40,34 @@ section#login{
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+    
+}
+section#login> div#cont_title > h1{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 23%;
+    left: 50%;
+}
+section#login> div#cont_title > p{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+}
+div#cont_title{
+    width: 150px;
+    background-color: blue;
+    margin: auto;
+    height: 150px;
+    border-radius: 100px;
+    margin-top: 10%;
+    font size: 2em;
 }
 div#formulario{
-    text-align: center;
-    width: 300px;
+    
 }
-div.campo{
+div#formulario > p{
+   
    
 }
 section#login > section#formulario{
