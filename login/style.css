@@ -32,7 +32,7 @@ main{
 section#login{
     background-color: white;
     text-align: center;
-    width: 80vwpx;
+    width: 600px;
     height: 500px;
     border-radius: 20px;
     position: absolute;
@@ -47,32 +47,42 @@ section#login> div#cont_title > h1{
     transform: translate(-50%, -50%);
     top: 23%;
     left: 50%;
+    font-size: 3.5em;
 }
 section#login> div#cont_title > p{
     position: absolute;
     transform: translate(-50%, -50%);
     top: 30%;
     left: 50%;
+    margin-top: 10px;
+    font-size: small;
 }
 div#cont_title{
     width: 150px;
-    background-color: blue;
+    background-color: rgb(169, 169, 248);
     margin: auto;
     height: 150px;
     border-radius: 100px;
     margin-top: 10%;
-    font size: 2em;
+    ;
 }
 div#formulario{
     
 }
 div#formulario > p{
-   
+    color: rgba(0, 0, 0, 0.637);
+    font-weight: bold;
+    margin-top: 20px;
    
 }
 section#login > section#formulario{
     display: block;
     padding: 10px;
+}
+#form_respo{
+    margin-top: 15px;
+   
+   
 }
 
 footer{
