@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+nav{
+    height: 100%;
+    width: 20%;
+    background-color: orange;
+}
+ div.logo{
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    background-color: red;
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    
+ }
+ div.logo > p{
+    
+    padding-left: 10px;
+    margin-left: 10px;
+   
+ }
+ div.menu {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+ }
+ div.menu > ul {
+    justify-content: right;
+     list-style: none;
+ }
+ div.menu > ul > li{
+    text-align: center;
+    margin-right: 80px;
+ }
+ div.menu > ul > svg{
+    background-color: black;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+ }
+ div.menu > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+ }
+
+main{
+    height: 100%;
+    width: 80%;
+    background-color: blue;
+}
+div.cabecalho{
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+div.cabecalho > input{
+    padding: 7px;
+    width:45%;
+   margin: 0px;
+    
+   
+}
+div#usuario_logo{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border: 2px solid rgba(0, 0, 0, 0.474);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 300px;
+}
+
+    
+    
+
+    
