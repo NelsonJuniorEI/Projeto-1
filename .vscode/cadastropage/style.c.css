@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+nav{
+    height: 100%;
+    width: 20%;
+    background-color: orange;
+}
+ div.logo{
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    background-color: red;
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    border-radius: 10px;
+    
+ }
+ div.logo > p{
+    padding-left: 10px;
+    margin-left: 10px;
+   
+ }
+ div.menu {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+ }
+ div.menu > ul {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+     list-style: none;
+     
+ }
+ div.menu > ul > li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-right: 80px;
+ }
+ div.menu > ul > svg{
+    background-color: black;
+    margin-right: 10px;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+    margin-right: 10px;
+ }
+ div.menu > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+ }
+ 
+main{
+    height: 100%;
+    width: 80%;
+    background-color: blue;
+}
+section.cabecalho{
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+    margin: 9px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-right: 6px;
+
+}
+section.cabecalho > input{
+    padding: 7px;
+    width:45%;
+   margin: 0px;
+   
+}
+div#usuario_logo{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border: 2px solid rgba(0, 0, 0, 0.474);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 283px;
+}
+div#nomeusu{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11%;
+  margin-left: 15px;
+}
+section.cabecalho > div#nomeusu > p{
+    
+}
+section.cabecalho > div#sair{
+    width: 13%;
+  
+    
+}
+section.cabecalho > div#sair > input{
+    width: 50%;
+    height: 50%;
+    font-size: 1.1em;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+section.cabecalho > div#barra{
+    background-color: pink;
+    width: 5px;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-inline: 40px;
+    margin-right: 20px;
+}
+
+
+section.info_cadastros{
+    width: 79vw;
+    height: 90vh;
+    background-color: white;
+    margin: 9px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.novo_cadastro{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+
+}
+section.info_cadastros > div#rel_cada > h2 > input {
+    margin-left: 90%;
+    margin-bottom: 30px;
+    background-color: rgb(7, 222, 7);
+    color: white;
+    width: 200px;
+    height: 30px;
+    font-size: 0.8em;
+}
+
+section.info_cadastros > div#rel_cada > ul {
+    padding: 25px;
+    list-style: none;
+    font-size: 1.2em;
+
+}
+section.info_cadastros > div#rel_cada > ul > li{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 5px 30px;
+     border-bottom: 1px  solid black;
+
+    }
+ section.info_cadastros > div#rel_cada > h2{
+ 
+ padding: 20px;
+ text-align: left;
+ margin-bottom: 10px;
+}
+
+section.info_cadastros > div#rel_cada > ul{
+    margin-top: 10px;
+    text-align: center;
+
+}
+section.info_cadastros > div#rel_cada > ul > li#titulo{
+    color: mediumslateblue;
+
+}
