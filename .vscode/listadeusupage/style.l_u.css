@@ -1,4 +1,3 @@
-@charset "UTF-8";
 
 :root{
     --roclaro: #A300F0;
@@ -28,17 +27,19 @@ body{
 nav{
     height: 100%;
     width: 20%;
-    background-color: orange;
+    background-color: var(--roescuro);
+    font-family: var(--font-padrao);
 }
  div.logo{
     margin: 15px;
     padding: 20px;
-    width: 211px;
-    background-color: red;
+    width: 218px;
+    background-color: white;
     display: flex;
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
+    font-family: var(--font-destaque);
     
  }
  div.logo > p{
@@ -52,6 +53,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  
    
  }
  div.menu > ul {
@@ -61,6 +63,7 @@ nav{
     align-items: start;
      list-style: none;
      
+     
  }
  div.menu > ul > li{
     display: flex;
@@ -69,9 +72,11 @@ nav{
     border-bottom: 1px solid black;
     width: 100%;
     margin-right: 80px;
+  
+   
  }
  div.menu > ul > svg{
-    background-color: black;
+    background-color:rgb(247, 0, 0);
     margin-right: 10px;
     font-size: 2em;
     width: 40px;
@@ -83,13 +88,15 @@ nav{
     padding: 10px;
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 4px black;
  }
  
 main{
     height: 100%;
     width: 80%;
-    background-color: blue;
+    background-color: var(--ronormal);
+    font-family: var(--font-padrao);
 }
 section.cabecalho{
     background-color: black;
@@ -99,8 +106,8 @@ section.cabecalho{
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    margin-right: 24px;
-
+    margin-right: 6px;
+    box-shadow: 1px 1px 4px black;
 }
 section.cabecalho > input{
     padding: 7px;
@@ -111,7 +118,7 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: yellow;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgba(0, 0, 0, 0.474);
     border-radius: 50%;
     display: inline-block;
@@ -141,7 +148,7 @@ section.cabecalho > div#sair > input{
     margin-left: 20px;
 }
 section.cabecalho > div#barra{
-    background-color: pink;
+    background-color: rgb(47, 45, 46);
     width: 5px;
     height: 40px;
     border-radius: 7px;
@@ -149,80 +156,41 @@ section.cabecalho > div#barra{
     margin-inline: 40px;
     margin-right: 20px;
 }
-section.info_cadastro {
-  display:flex ;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  position: relative;
-}
-section.info_cadastro > div#total_c {
-    width: 32%;
-    height: 200px;
-    border: 1px solid black;
- background-color: greenyellow;
- border-radius: 10px;
-}
-section.info_cadastro > div#ultimomes_c{
-    width: 32%;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 10px;  background-color: greenyellow;
-}
-section.info_cadastro > div#pendencia_c{
-    width: 30%;
-    height: 200px;
-    border: 1px solid black;
-    background-color: greenyellow;
-    border-radius: 10px;
-    margin-right: 15px;
-    
-}section.info_cadastro > div#pendencia_c >  h1{
-    margin: auto;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 87%;
-    font-size: 5em; 
-}
-section.info_cadastro > div#total_c >  h1{
-    margin: auto;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 33%;
-    font-size: 5em; 
-}
-section.info_cadastro > div#ultimomes_c >  h1{
-    margin: auto;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 60%;
-    font-size: 5em; 
-}
-section_cadastro > div#total_c > p{
-    flex-direction: row-reverse;
-}
-section.ultimo_cadastros{
-    width: 78vw;
-    height: 56vh;
+
+
+section.info_cadastros{
+    width: 79vw;
+    height: 90vh;
     background-color: white;
     margin: 9px;
     border-radius: 10px;
-    
-  
+    position: relative;
+    font-family: var(--font-padrao);
+
 }
-section.ultimo_cadastros > div#rel_cada > ul {
+.novo_cadastro{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    background-color: rgb(75, 75, 253);
+
+}
+section.info_cadastros > div#rel_cada > h2 > input {
+    margin-left: 90%;
+    margin-bottom: 30px;
+    color: white;
+    width: 200px;
+    height: 30px;
+    font-size: 0.8em;
+}
+
+section.info_cadastros > div#rel_cada > ul {
     padding: 25px;
     list-style: none;
     font-size: 1.2em;
 
 }
-section.ultimo_cadastros > div#rel_cada > ul > li{
+section.info_cadastros > div#rel_cada > ul > li{
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -230,24 +198,19 @@ section.ultimo_cadastros > div#rel_cada > ul > li{
      border-bottom: 1px  solid black;
 
     }
- section.ultimo_cadastros > div#rel_cada > h2{
+ section.info_cadastros > div#rel_cada > h2{
  
  padding: 20px;
  text-align: left;
  margin-bottom: 10px;
 }
 
-section.ultimo_cadastros > div#rel_cada > ul{
+section.info_cadastros > div#rel_cada > ul{
     margin-top: 10px;
     text-align: center;
 
 }
-section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
+section.info_cadastros > div#rel_cada > ul > li#titulo{
     color: mediumslateblue;
 
 }
-
-    
-    
-
-    

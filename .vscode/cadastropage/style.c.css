@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+:root{
+    --roclaro: #A300F0;
+    --roescuro:#3B1E54;
+    --rocinza:#D4BEE4;
+    --ronormal:#a429de;
+    --verdeclaro: #9DDE8B;
+
+    --font-padrao: "Open Sans", sans-serif;
+    --font-destaque: "Lexend", sans-serif;
+
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -17,17 +28,19 @@ body{
 nav{
     height: 100%;
     width: 20%;
-    background-color: orange;
+    background-color: var(--roescuro);
+    font-family: var(--font-padrao);
 }
  div.logo{
     margin: 15px;
     padding: 20px;
-    width: 200px;
-    background-color: red;
+    width: 218px;
+    background-color: white;
     display: flex;
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
+    font-family: var(--font-destaque);
     
  }
  div.logo > p{
@@ -41,6 +54,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  
    
  }
  div.menu > ul {
@@ -50,6 +64,7 @@ nav{
     align-items: start;
      list-style: none;
      
+     
  }
  div.menu > ul > li{
     display: flex;
@@ -58,9 +73,11 @@ nav{
     border-bottom: 1px solid black;
     width: 100%;
     margin-right: 80px;
+  
+   
  }
  div.menu > ul > svg{
-    background-color: black;
+    background-color:rgb(247, 0, 0);
     margin-right: 10px;
     font-size: 2em;
     width: 40px;
@@ -72,13 +89,15 @@ nav{
     padding: 10px;
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 4px black;
  }
  
 main{
     height: 100%;
     width: 80%;
-    background-color: blue;
+    background-color: var(--ronormal);
+    font-family: var(--font-padrao);
 }
 section.cabecalho{
     background-color: black;
@@ -89,7 +108,7 @@ section.cabecalho{
     justify-content: space-between;
     border-radius: 10px;
     margin-right: 6px;
-
+    box-shadow: 1px 1px 4px black;
 }
 section.cabecalho > input{
     padding: 7px;
@@ -100,7 +119,7 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: yellow;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgba(0, 0, 0, 0.474);
     border-radius: 50%;
     display: inline-block;
@@ -130,7 +149,7 @@ section.cabecalho > div#sair > input{
     margin-left: 20px;
 }
 section.cabecalho > div#barra{
-    background-color: pink;
+    background-color: rgb(47, 45, 46);
     width: 5px;
     height: 40px;
     border-radius: 7px;
@@ -147,18 +166,19 @@ section.info_cadastros{
     margin: 9px;
     border-radius: 10px;
     position: relative;
+    font-family: var(--font-padrao);
 
 }
 .novo_cadastro{
     position: absolute;
     top: 10px;
     right: 40px;
+    background-color: #9DDE8B;
 
 }
 section.info_cadastros > div#rel_cada > h2 > input {
     margin-left: 90%;
     margin-bottom: 30px;
-    background-color: rgb(7, 222, 7);
     color: white;
     width: 200px;
     height: 30px;

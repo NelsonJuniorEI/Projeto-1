@@ -48,13 +48,21 @@
 
         <section class="form_cadastros">
             <h1>Novo Cadastro</h1>
+
+            <div class="botao_atividade">
+                <label for="iatividade">Ativo</label>
+                <input type="button" id="iatividade">
+            </div>
+
             <form class="formulario">
-                <h1>1° Fatos e Dados</h1>
+                <h2>1° Fatos e Dados</h2>
           <div class="fatos_e_dados">
             <div class="form_nome">
                <label for="inome">Nome</label>
                <input type="text" name="nome" id="inome" class="inputs">
           </div> <!-- fatos e dados ( nome) -->
+
+          
          
          
             <div class="form_email_idade">
@@ -81,15 +89,14 @@
                 <input type="text" name="outras_info" id="ioutras_info" class="inputs">
 
             </div> <!-- outras informações -->
-           
-           
-           
+          
 
           </div>          <!-- Encerramento Fatos e dados -->
+
           <h2>2°Interesses</h2>
           <section class="interesses">
             <div class="form_interesses">
-                <input type="text" name="interesses" id="ienteresses">
+                <input type="text" name="interesses" id="iinteresses">
             </div>
             <h2>3°Sentimentos</h2>
             <section class="sentimentos">
@@ -104,7 +111,9 @@
                 </div>
 
             </section>
-<div class="form_bottom"><input type="submit" value="Gravar" class="botao"></div>
+ <div class="form_bottom">
+    <input type="submit" value="Gravar" id="btnGravar" class="btgravar">
+</div>
 
 
             </form>
@@ -115,7 +124,7 @@
          
         
     </main>
-
+    <script src="../javascript/script.js"></script>
 
     
 </body>
