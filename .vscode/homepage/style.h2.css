@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 :root{
-    --roclaro: #A300F0;
-    --roescuro:#3B1E54;
-    --rocinza:#D4BEE4;
-    --ronormal:#a429de;
+    --azulclaro: #DFF2EB;
+    --azulescuro:#4A628A;
+    --azulclaro2:#B9E5E8;
+    --azulnormal:#7AB2D3;
     --verdeclaro: #9DDE8B;
+    --roxoclaro:#A594F9;
+    --roxocinza:#CDC1FF;
+
 
     --font-padrao: "Open Sans", sans-serif;
     --font-destaque: "Lexend", sans-serif;
@@ -28,17 +31,21 @@ body{
 nav{
     height: 100%;
     width: 20%;
-    background-color: orange;
+    background-color:var(--azulnormal);
+    border-radius: 10px;
+
 }
  div.logo{
     margin: 15px;
     padding: 20px;
-    width: 211px;
-    background-color: red;
+    width: 218px;
+    background-color: white;
     display: flex;
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
+    font-family: var(--font-destaque);
+    box-shadow: 1px 1px 4px black;
     
  }
  div.logo > p{
@@ -180,28 +187,16 @@ section.info_cadastro > div#pendencia_c{
 }section.info_cadastro > div#pendencia_c >  h1{
     margin: auto;
     text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 87%;
     font-size: 5em; 
 }
 section.info_cadastro > div#total_c >  h1{
     margin: auto;
     text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 33%;
     font-size: 5em; 
 }
 section.info_cadastro > div#ultimomes_c >  h1{
     margin: auto;
     text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 29%;
-    left: 60%;
     font-size: 5em; 
 }
 section_cadastro > div#total_c > p{
