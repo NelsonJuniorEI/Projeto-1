@@ -210,7 +210,13 @@ section.ultimo_cadastros > div#rel_cada > ul > li#titulo:hover{
     background-color: #FFFFFF;
 }
 section.ultimo_cadastros > div#rel_cada > ul > li:hover{
-    background-color: var(--azulnormal2);
+    background-color: #B4D4FF;
+}
+#rel_cada > h2{
+    background-color: var(--azulescuro);
+    border-radius: 10px 10px 0px 0px  ;
+    color: white;
+    text-shadow: 1px 1px 3px black;
 }
 #rel_cada>ul>li>p>a{
     text-decoration: none;
@@ -221,6 +227,7 @@ section.ultimo_cadastros > div#rel_cada > ul > li:hover{
 }
 #rel_cada>ul>li>p>a:hover{
     color: white;
+    text-shadow: 1px 1px 3px black;
 }
     
 

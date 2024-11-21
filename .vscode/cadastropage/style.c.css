@@ -191,13 +191,20 @@ section.info_cadastros{
     
 
 }
+section.info_cadastros > div#rel_cada > h2  {
+  background-color: var(--azulescuro);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);
+  border-radius: 10px 10px 0px 0px ;
+}
 section.info_cadastros > div#rel_cada > h2 > input {
-    margin-left: 90%;
-    margin-bottom: 30px;
+   
+   
     color: white;
     width: 200px;
     height: 30px;
     font-size: 0.8em;
+   margin: auto;
 }
 
 section.info_cadastros > div#rel_cada > ul {

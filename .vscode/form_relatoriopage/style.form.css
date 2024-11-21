@@ -189,7 +189,7 @@ section.form_cadastros > div#titulo{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--azulescuro2);
+    background-color: var(--azulescuro);
     padding: 24px;
     margin: -16px;
     color: white;
