@@ -203,6 +203,24 @@ section.ultimo_cadastros > div#rel_cada > ul{
 
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
-    color: mediumslateblue;
+    color: var(--azulescuro2);
 
 }
+section.ultimo_cadastros > div#rel_cada > ul > li#titulo:hover{
+    background-color: #FFFFFF;
+}
+section.ultimo_cadastros > div#rel_cada > ul > li:hover{
+    background-color: var(--azulnormal2);
+}
+#rel_cada>ul>li>p>a{
+    text-decoration: none;
+    color:black ;
+
+
+
+}
+#rel_cada>ul>li>p>a:hover{
+    color: white;
+}
+    
+

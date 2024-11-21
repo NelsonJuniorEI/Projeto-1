@@ -213,16 +213,22 @@ section.info_cadastro > div#pendencia_c >  h1{
     margin: auto;
     text-align: center;
     font-size: 5em; 
+    color: var(--azulnormal);
+    text-shadow: 1px 1px 4px black;
 }
 section.info_cadastro > div#total_c >  h1{
     margin: auto;
     text-align: center;
     font-size: 5em; 
+    color: var(--azulnormal);
+    text-shadow: 1px 1px 4px black;
 }
 section.info_cadastro > div#ultimos_c >  h1{
     margin: auto;
     text-align: center;
     font-size: 5em; 
+    color: var(--azulnormal);
+    text-shadow: 1px 1px 4px black;
 }
 section.info_cadastro > div#total_c > p{
    align-content: end;
@@ -292,9 +298,16 @@ section.ultimo_cadastros > div#rel_cada > ul{
 
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
-    color: mediumslateblue;
+    color: var(--azulescuro2);
 
 }
+section.ultimo_cadastros > div#rel_cada > ul > li:hover{
+   background-color: var(--azulnormal2);
+}
+section.ultimo_cadastros > div#rel_cada > ul > li#titulo:hover{
+    background-color: #FFFFFF;
+}
+
 
     
     

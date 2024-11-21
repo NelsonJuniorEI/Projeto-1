@@ -11,6 +11,11 @@
     --verdeclaro: #9DDE8B;
     --roxoclaro:#A594F9;
     --roxocinza:#CDC1FF;
+    /* cor adicional */
+    --azulclaro3:#EEF5FF;
+    --azulnormal2: #B4D4FF;
+    --azulsolido:#86B6F6;
+    --azulescuro2:#176B87;
 
 
     --font-padrao: "Open Sans", sans-serif;
@@ -33,7 +38,7 @@ body, html{
    
     height: 100vh;
     width: 100vw;
-    background-image:linear-gradient( to left, #DFF2EB, #7AB2D3 );
+    background-image:linear-gradient( to left, #B9E5E8 , #176B87 );
 }
  
 header > p{
@@ -91,7 +96,7 @@ section#login> div#cont_title > p{
 }
 div#cont_title{
     width: 155px;
-    background-color:var(--azulnormal);
+    background-color:var(--azulescuro2);
     margin: auto;
     height: 155px;
     border-radius: 100px;
@@ -153,12 +158,3 @@ div.campo > input{
     padding: 5px;
 }
 
-
-
-    
-
-
-footer{
-
-
-}

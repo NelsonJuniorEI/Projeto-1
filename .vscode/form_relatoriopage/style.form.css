@@ -130,8 +130,8 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: rgba(197, 197, 197, 0.842);
-    border: 2px solid rgba(197, 197, 197, 0.842);
+    background-color: var(--azulsolido);
+    border: 2px solid var(--azulnormal);
     border-radius: 50%;
     display: inline-block;
     margin-left: 283px;
@@ -189,6 +189,11 @@ section.form_cadastros > div#titulo{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--azulescuro2);
+    padding: 24px;
+    margin: -16px;
+    color: white;
+    text-shadow: 1px 1px 6px black;
 } 
 
 
@@ -243,11 +248,19 @@ form{
     padding: 15px 15px;
     position: relative;
 }
+form.formulario > h2{
+    margin: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #176B87;
+    color: rgb(0, 0, 0);
+   
+}
 
   form.formulario > div.fatos_e_dados{
     width: 100%;
     
 }
+
 div.fatos_e_dados > div.form_nome {
     display: flex;
     flex-direction: column;
@@ -273,7 +286,12 @@ div.form_outras_info{
 }
 section.interesses{
     width: 100%;
-    
+     
+}
+section.interesses > h2{
+    border-bottom: 1px solid #176B87;
+    padding: 10px;
+    margin: 15px    ;
 }
 div.form_interesses{
     padding: 10px;
@@ -324,6 +342,7 @@ input.btgravar{
     cursor: pointer;
     color: rgb(255, 255, 255);
     box-shadow: 1px 1px 3px black;
+    font-size: 1.3em;
 }
 input.btgravar:hover{
     background-color:#229cc5 ;
@@ -332,11 +351,11 @@ input.btgravar:hover{
 div.botao_atividade{
     flex-direction: row;
 }
-div.botao_atividade > input{
+div.botao_atividade > input#iatividade{
     width: 15px;
     height: 15px;
-    border-radius:50%;
-    border-style: none;
+    border-radius: 50px;
+   
     border: 1px solid rgba(0, 0, 0, 0.29);
 
 }

@@ -230,6 +230,14 @@ section.info_cadastros > div#rel_cada > ul{
 
 }
 section.info_cadastros > div#rel_cada > ul > li#titulo{
-    color: mediumslateblue;
+    color: var(--azulescuro2);
+
+}
+section.info_cadastros > div#rel_cada > ul > li#titulo:hover{
+   background-color: #FFFFFF;
+
+}
+section.info_cadastros > div#rel_cada > ul > li:hover{
+    background-color: var(--azulnormal2);
 
 }

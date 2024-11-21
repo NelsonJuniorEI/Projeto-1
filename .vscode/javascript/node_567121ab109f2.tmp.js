@@ -12,10 +12,8 @@
  const btgravar = document.querySelector('#btnGravar')
  const botaoativo = document.querySelector('#iatividade')
  const btncadastro = document.querySelector('#btnovo_colaborador')
- const pesquisar= document.querySelector(".pesquisar")
-
- 
- 
+ const colaboradores= {}
+ localStorage.setItem("colaboradores",JSON.stringify(colaboradores))
  
  const usuario = {
     nome:"junin@gmail.com",
@@ -38,8 +36,6 @@
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }
-
- 
 //  validar o campo
 function validarCampos(){
 
@@ -96,65 +92,15 @@ function criarUsuario (){
      valorAtivo
     
  }
- const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
- colaboradores.push(colaborador)
  
-localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
+localStorage.setItem("colaboradores" , JSON.stringify(colaborador))
+criarLista(colaborador)
 alert('usuário criado')
-
- 
 }
 function criarLista (colaborador){
-   const lista = document.querySelector(".lista-colaborador")
+   const lista = document.querySelector("#list_col")
    const item = document.createElement("li")
    item.innerHTML = `<p>${colaborador.valorFname}</p> <p>${colaborador.valorFemail}</p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
    lista.appendChild(item)
 
-}
-
-function carregarLista(){
-
-   const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
-   colaboradores.forEach(colaborador => criarLista(colaborador) );
-}
-function carregar(){
-   carregarLista()
-   totalCadastro()
-}
-
-function totalCadastro(){
-   const total= document.querySelector("#total")
-   const vazio= document.querySelector("#pendente")
-   const ativos= document.querySelector("#ativos")
-   const colaboradores =  JSON.parse(localStorage.getItem('colaboradores'))
-   let numeroColaboradores= colaboradores.length
-   let pendentes=0;
-   colaboradores.forEach(itens=>{
-      if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
-         pendentes = pendentes+1; 
-      }
-         
-
-   });
-   const cadastroAtivo=colaboradores.filter(itens=> itens.valorAtivo==true)
-   let cadastrosAtivos= cadastroAtivo.length
-   vazio.innerHTML=pendentes;
-   total.innerHTML= numeroColaboradores;
-   ativos.innerHTML= cadastrosAtivos
-}
-
-function pesquisarInput(){
-   const lista = document.querySelector(".lista-colaborador")
-   const  colaboradores= JSON.parse(localStorage.getItem("colaboradores"))
-   let valor = pesquisar.value.toLowerCase()
-   lista.innerHTML=""
-   colaboradores.forEach(colaborador=>{
-      if(colaborador.valorFname.toLowerCase().includes(valor)){
-         criarLista(colaborador)
-      }
-   })
-
-}
-function imprimir(){
-   window.print()
 }
