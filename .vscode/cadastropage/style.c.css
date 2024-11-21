@@ -211,7 +211,7 @@ section.info_cadastros > div#rel_cada > ul > li{
      align-items: center;
      justify-content: space-between;
      padding: 5px 30px;
-     border-bottom: 1px  solid black;
+     border-bottom: 1px  solid rgba(0, 0, 0, 0.336);
 
     }
  section.info_cadastros > div#rel_cada > h2{

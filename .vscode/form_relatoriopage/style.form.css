@@ -184,14 +184,15 @@ section.form_cadastros{
     
 
 }
-section.form_cadastros > h1 > div.botao_atividade{
-    width: 15px;
-    height: 15px;
-    border-radius:50%;
-    border-style: none;
-    border: 1px solid rgba(0, 0, 0, 0.29);
+section.form_cadastros > div#titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} 
 
-}
+
+
 section.form_cadastros > div#rel_cada  > h2{
     font-weight: bold;
     padding-left: 20px;

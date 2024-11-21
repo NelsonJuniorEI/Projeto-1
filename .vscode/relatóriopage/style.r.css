@@ -1,5 +1,25 @@
 @charset "UTF-8";
 
+:root{
+    --azulclaro: #DFF2EB;
+    --azulescuro:#4A628A;
+    --azulclaro2:#B9E5E8;
+    --azulnormal:#7AB2D3;
+    --verdeclaro: #9DDE8B;
+    --roxoclaro:#A594F9;
+    --roxocinza:#CDC1FF;
+
+    /* cor adicional */
+    --azulclaro3:#EEF5FF;
+    --azulnormal2: #B4D4FF;
+    --azulsolido:#86B6F6;
+    --azulescuro2:#176B87;
+
+    --font-padrao: "Open Sans", sans-serif;
+    --font-destaque: "Lexend", sans-serif;
+
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -17,17 +37,20 @@ body{
 nav{
     height: 100%;
     width: 20%;
-    background-color: orange;
+    background-image: linear-gradient(to top,#86B6F6, #176B87 );
+    font-family:var(--font-padrao) ;
 }
  div.logo{
     margin: 15px;
     padding: 20px;
-    width: 211px;
-    background-color: red;
+    width: 218px;
+    background-color:white;
     display: flex;
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+    font-family: var(--font-destaque);
     
  }
  div.logo > p{
@@ -60,28 +83,30 @@ nav{
     margin-right: 80px;
  }
  div.menu > ul > svg{
-    background-color: black;
     margin-right: 10px;
     font-size: 2em;
     width: 40px;
     padding: 5px;
     margin-right: 10px;
+    color: white;
  }
  div.menu > ul > li > a{
     display: block;
     padding: 10px;
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 4px black;
  }
  
 main{
     height: 100%;
     width: 80%;
-    background-color: blue;
+    background-color:var(--azulclaro3);
+    font-family: var(--font-padrao);
 }
 section.cabecalho{
-    background-color: black;
+    background-color:var(--azulescuro2) ;
     text-align: center;
     padding: 12px;
     margin: 9px;
@@ -89,6 +114,7 @@ section.cabecalho{
     justify-content: space-between;
     border-radius: 10px;
     margin-right: 6px;
+    box-shadow: 1px 1px 4px black;
 
 }
 section.cabecalho > input{
@@ -100,22 +126,20 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: yellow;
-    border: 2px solid rgba(0, 0, 0, 0.474);
+    background-color: rgba(197, 197, 197, 0.842);
+    border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 50%;
     display: inline-block;
     margin-left: 283px;
 }
 div#nomeusu{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 11%;
-  margin-left: 15px;
-}
-section.cabecalho > div#nomeusu > p{
-    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11%;
+    margin-left: 15px;
+    font-family: var(--font-padrao);
 }
 section.cabecalho > div#sair{
     width: 13%;
@@ -131,13 +155,14 @@ section.cabecalho > div#sair > input{
     cursor: pointer;
 }
 section.cabecalho > div#barra{
-    background-color: pink;
+    background-color:var(--azulnormal);
     width: 5px;
     height: 40px;
     border-radius: 7px;
     margin-top: 7px;
     margin-inline: 40px;
     margin-right: 20px;
+    box-shadow: 1px 1px 4px black;
 }
 
 
@@ -147,6 +172,7 @@ section.ultimo_cadastros{
     background-color: white;
     margin: 9px;
     border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
     
   
 }
@@ -161,7 +187,7 @@ section.ultimo_cadastros > div#rel_cada > ul > li{
      align-items: center;
      justify-content: space-between;
      padding: 5px 30px;
-     border-bottom: 1px  solid black;
+     border-bottom: 1px  solid rgba(0, 0, 0, 0.199);
 
     }
  section.ultimo_cadastros > div#rel_cada > h2{
