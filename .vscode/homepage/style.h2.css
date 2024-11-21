@@ -165,13 +165,15 @@ section.cabecalho > div#barra{
     box-shadow: 1px 1px 4px black;
 }
 section.info_cadastro {
-  display:flex ;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  position: relative;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
-  border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
+    border-radius: 5px;
+    width: 95%;
+    margin: auto;
 }
 section.info_cadastro > div#total_c {
     width: 32%;
@@ -254,13 +256,13 @@ section.info_cadastro > div#ultimos_c > p{
     border-radius: 0px 0px 10px 10px;
  }
 section.ultimo_cadastros{
-    width: 78vw;
+    width: 75vw;
     height: 56vh;
     background-color: white;
-    margin: 9px;
+    margin: 35px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.589);
-    
+   
   
 }
 section.ultimo_cadastros > div#rel_cada > ul {

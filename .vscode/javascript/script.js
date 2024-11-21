@@ -10,22 +10,30 @@
  const formsentimentos = document.querySelector('#isentimentos')
  const formvalores = document.querySelector('#ivalores')
  const btgravar = document.querySelector('#btnGravar')
+ const botaoativo = document.querySelector('#iatividade')
+ const btncadastro = document.querySelector('#btnovo_colaborador')
  
  const usuario = {
     nome:"junin@gmail.com",
     senha:123
  }
  btgravar.addEventListener("click", (event) =>{
-    debugger;
+  debugger
     event.preventDefault() 
-    criarUsuario ()
+     criarUsuario ()
+
  } )
 //  botão click
- btentrar.addEventListener("click" , (event)=>{
-    event.preventDefault()
-   
- validarCampos()
- })
+
+//   btentrar.addEventListener("click" , (event)=>{
+//    event.preventDefault()
+
+//  validarCampos()
+//  })
+//  botão de abrir campo de cadastro
+function ir(){
+   window.location.href="../form_relatoriopage/form_rel.html"
+}
 //  validar o campo
 function validarCampos(){
 
@@ -51,7 +59,7 @@ function validarCampos(){
 }
 // Validação do login, @ e .com no e-mail e senha.
 function criarUsuario (){
-
+   
     let valorFname = formname.value
     let valorFidade = formidade.value
     let valorFemail = formemail.value
@@ -60,6 +68,8 @@ function criarUsuario (){
     let valorFinteresses = forminteresses.value
     let valorFsentimentos = formsentimentos.value
     let valorFvalor = formvalores.value
+    let valorAtivo =  botaoativo.checked?true:false
+    
 
     if ( valorFname == "" || valorFidade =="" || valorFemail == "" ){
         alert("Preencha os campos de E-mail, idade e nome!")
@@ -76,9 +86,18 @@ function criarUsuario (){
      valorFoutrasinfo ,
      valorFinteresses,
      valorFsentimentos ,
-     valorFvalor 
+     valorFvalor ,
+     valorAtivo
     
  }
 localStorage.setItem("colaboradores" , JSON.stringify(colaborador))
+criarLista(colaborador)
+alert('usuário criado')
+}
+function criarLista (colaborador){
+   const lista = document.querySelector("#list_col")
+   const item = document.createElement("li")
+   item.innerHTML = `<p>${colaborador.valorFname}</p> <p>${colaborador.valorFemail}</p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
+   lista.appendChild(item)
 
 }
