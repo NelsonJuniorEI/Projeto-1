@@ -80,7 +80,7 @@ nav{
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
  }
@@ -156,15 +156,17 @@ section.cabecalho > div#sair > input{
     font-size: 1.1em;
     margin-top: 14px;
     margin-left: 20px;
+    cursor: pointer;
 }
 section.cabecalho > div#barra{
-    background-color: rgb(19, 18, 19);
+    background-color:var(--azulnormal);
     width: 5px;
     height: 40px;
     border-radius: 7px;
     margin-top: 7px;
     margin-inline: 40px;
     margin-right: 20px;
+    box-shadow: 1px 1px 4px black;
 }
 
 
@@ -323,7 +325,7 @@ input.btgravar{
     box-shadow: 1px 1px 3px black;
 }
 input.btgravar:hover{
-    background-color:#29b2e0 ;
+    background-color:#229cc5 ;
     
 }
 div.botao_atividade{

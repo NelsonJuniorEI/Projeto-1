@@ -55,7 +55,7 @@ nav{
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
  }
@@ -128,6 +128,7 @@ section.cabecalho > div#sair > input{
     font-size: 1.1em;
     margin-top: 14px;
     margin-left: 20px;
+    cursor: pointer;
 }
 section.cabecalho > div#barra{
     background-color: pink;

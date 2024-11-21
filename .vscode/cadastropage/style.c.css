@@ -1,11 +1,19 @@
 @charset "UTF-8";
 
 :root{
-    --roclaro: #A300F0;
-    --roescuro:#3B1E54;
-    --rocinza:#D4BEE4;
-    --ronormal:#a429de;
+    --azulclaro: #DFF2EB;
+    --azulescuro:#4A628A;
+    --azulclaro2:#B9E5E8;
+    --azulnormal:#7AB2D3;
     --verdeclaro: #9DDE8B;
+    --roxoclaro:#A594F9;
+    --roxocinza:#CDC1FF;
+
+    /* cor adicional */
+    --azulclaro3:#EEF5FF;
+    --azulnormal2: #B4D4FF;
+    --azulsolido:#86B6F6;
+    --azulescuro2:#176B87;
 
     --font-padrao: "Open Sans", sans-serif;
     --font-destaque: "Lexend", sans-serif;
@@ -28,8 +36,8 @@ body{
 nav{
     height: 100%;
     width: 20%;
-    background-color: var(--roescuro);
-    font-family: var(--font-padrao);
+    background-image: linear-gradient(to top,#86B6F6, #176B87 );
+    font-family:var(--font-padrao) ;
 }
  div.logo{
     margin: 15px;
@@ -40,7 +48,8 @@ nav{
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
-    font-family: var(--font-destaque);
+    box-shadow: 1px 1px 6px black;
+    font-family: var(--font-destaque)
     
  }
  div.logo > p{
@@ -70,14 +79,13 @@ nav{
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
   
    
  }
  div.menu > ul > svg{
-    background-color:rgb(247, 0, 0);
     margin-right: 10px;
     font-size: 2em;
     width: 40px;
@@ -96,11 +104,11 @@ nav{
 main{
     height: 100%;
     width: 80%;
-    background-color: var(--ronormal);
+    background-color:var(--azulclaro3);
     font-family: var(--font-padrao);
 }
 section.cabecalho{
-    background-color: black;
+    background-color:var(--azulescuro2) ;
     text-align: center;
     padding: 12px;
     margin: 9px;
@@ -119,23 +127,22 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid rgba(0, 0, 0, 0.474);
+    background-color: rgba(197, 197, 197, 0.842);
+    border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 50%;
     display: inline-block;
     margin-left: 283px;
 }
 div#nomeusu{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 11%;
-  margin-left: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11%;
+    margin-left: 15px;
+    font-family: var(--font-padrao);
 }
-section.cabecalho > div#nomeusu > p{
-    
-}
+
 section.cabecalho > div#sair{
     width: 13%;
   
@@ -147,15 +154,17 @@ section.cabecalho > div#sair > input{
     font-size: 1.1em;
     margin-top: 14px;
     margin-left: 20px;
+    cursor: pointer;
 }
 section.cabecalho > div#barra{
-    background-color: rgb(47, 45, 46);
+    background-color:var(--azulnormal);
     width: 5px;
     height: 40px;
     border-radius: 7px;
     margin-top: 7px;
     margin-inline: 40px;
     margin-right: 20px;
+    box-shadow: 1px 1px 4px black;
 }
 
 
@@ -167,13 +176,19 @@ section.info_cadastros{
     border-radius: 10px;
     position: relative;
     font-family: var(--font-padrao);
+    box-shadow: 1px 1px 4px black;
 
 }
 .novo_cadastro{
     position: absolute;
     top: 10px;
     right: 40px;
-    background-color: #9DDE8B;
+    background-color: #229cc5;
+    border: none;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+    cursor: pointer;
+    
 
 }
 section.info_cadastros > div#rel_cada > h2 > input {
