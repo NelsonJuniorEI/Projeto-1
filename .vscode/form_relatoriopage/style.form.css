@@ -34,13 +34,14 @@ body{
     
 
 nav{
-    height: 100%;
+    height: 1024px;
     width: 20%;
     background-image: linear-gradient(to top,#86B6F6, #176B87 );
     font-family:var(--font-padrao) ;
 }
  div.logo{
-    margin: 15px;
+    margin: auto;
+    margin-top: 57%;
     padding: 20px;
     width: 218px;
     background-color:white;
@@ -84,7 +85,21 @@ nav{
     width: 100%;
     margin-right: 80px;
  }
-
+ div.menu > ul > li#home_icone:hover{
+    background-color: #b4d5ff80;
+   border-radius: 5px; 
+   transition-duration: 0.6s;
+}
+div.menu > ul > li#cadastro_icone:hover{
+   background-color: #b4d5ff80;
+  border-radius: 5px; 
+  transition-duration: 0.6s;
+}
+div.menu > ul > li#relatorios_icone:hover{
+   background-color: #b4d5ff80;
+  border-radius: 5px; 
+  transition-duration: 0.6s;
+}
  div.menu > ul > svg{
     margin-right: 10px;
     font-size: 2em;
@@ -130,12 +145,19 @@ section.cabecalho > input{
 div#usuario_logo{
     height: 50px;
     width: 50px;
-    background-color: var(--azulsolido);
-    border: 2px solid var(--azulnormal);
+    background-color: rgba(197, 197, 197, 0.842);
+    border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 50%;
     display: inline-block;
     margin-left: 283px;
 }
+div#usuario_logo > svg{
+    display: flex;
+    width: 51px;
+    height: 41px;
+    margin-top: 4px;
+ 
+ }
 div#nomeusu{
   color: white;
   display: flex;
@@ -144,6 +166,8 @@ div#nomeusu{
   width: 11%;
   margin-left: 15px;
   font-family: var(--font-padrao);
+  font-size: 1.1em;
+  font-weight: bold;
 }
 section.cabecalho > div#sair{
     width: 13%;
@@ -153,10 +177,19 @@ section.cabecalho > div#sair{
 section.cabecalho > div#sair > input{
     width: 50%;
     height: 50%;
-    font-size: 1.1em;
+    font-size: 1.4em;
     margin-top: 14px;
     margin-left: 20px;
+    background-color: #176B87;
+    border: none; 
+    color:rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.693);
     cursor: pointer;
+}
+section.cabecalho > div#sair > input:hover{
+    background-color: #1d8baf;
+    border: 1px solid white;
+    transition-duration: 0.4s  ;
 }
 section.cabecalho > div#barra{
     background-color:var(--azulnormal);
@@ -189,7 +222,7 @@ section.form_cadastros > div#titulo{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--azulescuro);
+    background-color: var(--azulescuro2);
     padding: 24px;
     margin: -16px;
     color: white;
@@ -244,7 +277,7 @@ section.form_cadastros > div#rel_cada > ul{
 form{
    
     width: 98%;
-    height: 90%;
+    height: 1024px;
     padding: 15px 15px;
     position: relative;
 }
@@ -345,7 +378,8 @@ input.btgravar{
     font-size: 1.3em;
 }
 input.btgravar:hover{
-    background-color:#229cc5 ;
+    background-color:#0a3252 ;
+    transition-duration: 0.3s;
     
 }
 div.botao_atividade{

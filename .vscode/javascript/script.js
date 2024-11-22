@@ -1,6 +1,6 @@
  const email = document.querySelector('#ilogin')
  const senha = document.querySelector('#isen')
- const btentrar = document.querySelector('#ientrar')
+ const btentrar = document.querySelector('#ienter')
  const formname = document.querySelector('#inome')
  const formidade = document.querySelector('#iidade')
  const formemail= document.querySelector('#iemail')
@@ -19,7 +19,7 @@
  
  const usuario = {
     nome:"junin@gmail.com",
-    senha:123
+    senha: 123
  }
  btgravar.addEventListener("click", (event) =>{
   debugger
@@ -27,22 +27,22 @@
      criarUsuario ()
 
  } )
-//  botão click
 
-//   btentrar.addEventListener("click" , (event)=>{
-//    event.preventDefault()
-
+  btentrar.addEventListener("click" , (event)=>{
+   // event.preventDefault()
+ alert("clicou")
 //  validarCampos()
-//  })
-//  botão de abrir campo de cadastro
+ })
+ 
+
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }
 
  
 //  validar o campo
-function validarCampos(){
-
+function validarCampos(event){
+    event.preventDefault()
     let valorEmail = email.value 
     let valorSenha = senha.value 
 
@@ -56,9 +56,8 @@ function validarCampos(){
    }
    if (valorEmail == usuario.nome && valorSenha == usuario.senha)
    {
-    window.location.href = "./homepage/home.2.html"
 
-         window.location.href = "../homepage/home.2.html"
+         window.location.href = "../homepage/home.html"      
 
    }
 
