@@ -171,22 +171,26 @@ section.cabecalho > div#sair{
   
     
 }
-section.cabecalho > div#sair > input{
-    width: 50%;
-    height: 50%;
+section.cabecalho > div#sair > a{
+   
     font-size: 1.4em;
-    margin-top: 14px;
-    margin-left: 20px;
     background-color: #176B87;
-    border: none; 
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border: 1px solid rgba(255, 255, 255, 0.693);
     cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
 }
-section.cabecalho > div#sair > input:hover{
-    background-color: #1d8baf;
-    border: 1px solid white;
-    transition-duration: 0.4s  ;
+section.cabecalho > div#sair > a:hover{
+   background-color: #1d8baf;
+   border: 1px solid white;
+   transition-duration: 0.4s;
 }
 section.cabecalho > div#barra{
     background-color:var(--azulnormal);
@@ -199,6 +203,21 @@ section.cabecalho > div#barra{
     box-shadow: 1px 1px 4px black;
 }
 
+.novo_cadastro{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    background-color:#81da68;
+    border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.504);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.info_cadastros > div#rel_cada > h2 > input:hover{
+    background-color:#67fc3eb5;
+    transition-duration: 0.4s ;
+}
 
 section.info_cadastros{
     width: 79vw;
@@ -212,15 +231,12 @@ section.info_cadastros{
     cursor: pointer;
 
 }
-.novo_cadastro{
-    position: absolute;
-    top: 10px;
-    right: 40px;
-    background-color:#81da68;
-    border: none;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.504);
-    border-radius: 5px;
-    cursor: pointer;
+
+ section.info_cadastros > div#rel_cada > h2{
+ 
+ padding: 20px;
+ text-align: left;
+ margin-bottom: 10px;
 }
 
 section.info_cadastros > div#rel_cada > h2  {
@@ -237,15 +253,11 @@ section.info_cadastros > div#rel_cada > h2 > input {
    margin: auto;
 }
 
-section.info_cadastros > div#rel_cada > h2 > input:hover{
-    background-color:#67fc3eb5;
-    transition-duration: 0.4s ;
-}
-
 section.info_cadastros > div#rel_cada > ul {
     padding: 25px;
     list-style: none;
     font-size: 1.2em;
+    text-align: center;
 
 }
 section.info_cadastros > div#rel_cada > ul > li{
@@ -256,12 +268,7 @@ section.info_cadastros > div#rel_cada > ul > li{
      border-bottom: 1px  solid rgba(0, 0, 0, 0.336);
 
     }
- section.info_cadastros > div#rel_cada > h2{
- 
- padding: 20px;
- text-align: left;
- margin-bottom: 10px;
-}
+
 
 section.info_cadastros > div#rel_cada > ul{
     margin-top: 10px;

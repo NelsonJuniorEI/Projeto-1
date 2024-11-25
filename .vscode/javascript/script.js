@@ -31,7 +31,7 @@
   btentrar.addEventListener("click" , (event)=>{
    // event.preventDefault()
  alert("clicou")
-//  validarCampos()
+   //  validarCampos()
  })
  
 
@@ -40,7 +40,7 @@ function ir(){
 }
 
  
-//  validar o campo
+    //  validar o campo
 function validarCampos(event){
     event.preventDefault()
     let valorEmail = email.value 
@@ -62,7 +62,7 @@ function validarCampos(event){
    }
 
 }
-// Validação do login, @ e .com no e-mail e senha.
+    // Validação do login, @ e .com no e-mail e senha.
 function criarUsuario (){
    
     let valorFname = formname.value
@@ -82,7 +82,9 @@ function criarUsuario (){
         formname.style.border = "3px solid red"
         formidade.style.border = "3px solid red"
         formemail.style.border = "3px solid red"
+        return
     }
+    
  const colaborador = {
     valorFname,
      valorFidade ,
@@ -108,7 +110,6 @@ function criarLista (colaborador){
    const item = document.createElement("li")
    item.innerHTML = `<p>${colaborador.valorFname}</p> <p>${colaborador.valorFemail}</p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
    lista.appendChild(item)
-
 }
 
 function carregarLista(){

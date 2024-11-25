@@ -201,11 +201,9 @@ section.cabecalho > div#barra{
     margin-right: 20px;
     box-shadow: 1px 1px 4px black;
 }
-
-
 section.form_cadastros{
     width:95%;
-   height: 80%;
+    height: 80%;
     background-color: white;
     margin: 9px 2%;
     border-radius: 10px;
@@ -214,8 +212,6 @@ section.form_cadastros{
     overflow-y: auto;
     font-family: var(--font-padrao);
     box-shadow: 1px 1px 6px black;
-    
-
 }
 section.form_cadastros > div#titulo{
     display: flex;
@@ -228,18 +224,14 @@ section.form_cadastros > div#titulo{
     color: white;
     text-shadow: 1px 1px 6px black;
 } 
-
-
-
-section.form_cadastros > div#rel_cada  > h2{
+section.form_cadastros > div#rel_cada > h2{
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 10px;
     font-weight: bold;
     padding-left: 20px;
     border-bottom: 1px solid black;
 }
-
-    
-
-
 section.form_cadastros > div#rel_cada > h2 > input {
     margin-left: 90%;
     margin-bottom: 40px;
@@ -255,32 +247,30 @@ section.form_cadastros > div#rel_cada > ul {
     font-size: 1.2em;
 
 }
+
 section.form_cadastros > div#rel_cada > ul > li{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 1px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 0px;
      
 
     }
- section.form_cadastros > div#rel_cada > h2{
  
- padding: 20px;
- text-align: left;
- margin-bottom: 10px;
-}
 
 section.form_cadastros > div#rel_cada > ul{
     text-align: center;
 
 }
-form{
-   
+
+form {
+  
     width: 98%;
     height: 1024px;
     padding: 15px 15px;
     position: relative;
 }
+
 form.formulario > h2{
     margin: 15px;
     padding: 10px;
@@ -319,12 +309,11 @@ div.form_outras_info{
 }
 section.interesses{
     width: 100%;
-     
 }
 section.interesses > h2{
     border-bottom: 1px solid #176B87;
     padding: 10px;
-    margin: 15px    ;
+    margin: 15px;
 }
 div.form_interesses{
     padding: 10px;
@@ -393,5 +382,5 @@ div.botao_atividade > input#iatividade{
     border: 1px solid rgba(0, 0, 0, 0.29);
 
 }
-/*  */
+
 

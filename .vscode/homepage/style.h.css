@@ -30,14 +30,11 @@ body{
     align-items: center;
     justify-content: center;
 }
-    
-
 nav{
     height: 1024px;;
     width: 20%;
     background-image: linear-gradient(to top,#86B6F6, #176B87 );
     font-family:var(--font-padrao) ;
-
 }
  div.logo{
     margin: auto;
@@ -51,12 +48,10 @@ nav{
     border-radius: 10px;
     box-shadow: 1px 1px 6px black;
     font-family: var(--font-destaque);
-    
  }
  div.logo > p{
     padding-left: 10px;
     margin-left: 10px;
-   
  }
  div.menu {
     margin-top: 50px;
@@ -64,7 +59,6 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-   
  }
  div.menu > ul {
     display: flex;
@@ -72,7 +66,6 @@ nav{
     flex-direction: column;
     align-items: start;
      list-style: none;
-     
  }
  div.menu > ul > li{
     display: flex;
@@ -81,11 +74,9 @@ nav{
     border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
-   
-   
  }
  div.menu > ul > li#home_icone:hover{
-     background-color: #b4d5ff80;
+    background-color: #b4d5ff80;
     border-radius: 5px; 
     transition-duration: 0.6s;
  }
@@ -104,8 +95,7 @@ div.menu > ul > li#relatorios_icone:hover{
     font-size: 2em;
     width: 40px;
     padding: 5px;
-    margin-right: 10px;
-    
+    margin-right: 10px;  
  }
  div.menu > ul > li > a{
     display: block;
@@ -115,8 +105,7 @@ div.menu > ul > li#relatorios_icone:hover{
     color: white;
     text-shadow: 1px 1px 4px black;
  }
- 
-main{
+ main{
     height: 100%;
     width: 80%;
     background-color:var(--azulclaro3);
@@ -132,143 +121,140 @@ section.cabecalho{
     border-radius: 10px;
     margin-right: 6px;
     box-shadow: 1px 1px 4px black;
-
 }
 section.cabecalho > input{
-    padding: 7px;
-    width:45%;
+   padding: 7px;
+   width:45%;
    margin: 0px;
-   
 }
 div#usuario_logo{
-    height: 50px;
-    width: 50px;
-    background-color: rgba(197, 197, 197, 0.842);
-    border: 2px solid rgba(197, 197, 197, 0.842);
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: 283px;
+   height: 50px;
+   width: 50px;
+   background-color: rgba(197, 197, 197, 0.842);
+   border: 2px solid rgba(197, 197, 197, 0.842);
+   border-radius: 50%;
+   display: inline-block;
+   margin-left: 283px;
 }
 div#usuario_logo > svg{
-    display: flex;
-    width: 51px;
-    height: 41px;
-    margin-top: 4px;
+   display: flex;
+   width: 51px;
+   height: 41px;
+   margin-top: 4px;
 }
 div#nomeusu{
 
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 11%;
-    margin-left: 15px;
-    font-family: var(--font-padrao);
-     font-size: 1.1em;
-    font-weight: bold;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 11%;
+   margin-left: 15px;
+   font-family: var(--font-padrao);
+   font-size: 1.1em;
+   font-weight: bold;
 }
-
 section.cabecalho > div#sair{
     width: 13%;
-   
-
-  
-    
 }
-section.cabecalho > div#sair > input{
-    width: 50%;
-    height: 50%;
+section.cabecalho > div#sair > a{
+   
     font-size: 1.4em;
-    margin-top: 14px;
-    margin-left: 20px;
     background-color: #176B87;
-    border: none; 
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border: 1px solid rgba(255, 255, 255, 0.693);
     cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
 }
-section.cabecalho > div#sair > input:hover{
-    background-color: #1d8baf;
-    border: 1px solid white;
-    transition-duration: 0.4s  ;
+section.cabecalho > div#sair > a:hover{
+   background-color: #1d8baf;
+   border: 1px solid white;
+   transition-duration: 0.4s;
 }
 section.cabecalho > div#barra{
-    background-color:var(--azulnormal);
-    width: 5px;
-    height: 40px;
-    border-radius: 7px;
-    margin-top: 7px;
-    margin-inline: 40px;
-    margin-right: 20px;
-    box-shadow: 1px 1px 4px black;
+   background-color:var(--azulnormal);
+   width: 5px;
+   height: 40px;
+   border-radius: 7px;
+   margin-top: 7px;
+   margin-inline: 40px;
+   margin-right: 20px;
+   box-shadow: 1px 1px 4px black;
 }
 section.info_cadastro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    padding-left: 10px ;
-    position: relative;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.599);
-    border-radius: 5px;
-    width: 95%;
-    margin: 15px;
-    margin-top: 28px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 10px;
+   padding-left: 10px ;
+   position: relative;
+   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.599);
+   border-radius: 5px;
+   width: 94%;
+   margin: 33px;
+   margin-top: 28px;
 }
 section.info_cadastro > div#total_c {
-    width: 32%;
-    height: 200px;
-    border: 1px solid black;
-    background-color:var(--azulclaro);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    border: none;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
+   width: 32%;
+   height: 200px;
+   border: 1px solid black;
+   background-color:var(--azulclaro);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   border: none;
+   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
 }
 section.info_cadastro > div#ultimos_c{
-    width: 32%;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 10px; 
-     background-color: var(--azulclaro);
-    display: flex;
-    flex-direction: column;
-    border: none;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
+   width: 32%;
+   height: 200px;
+   border: 1px solid black;
+   border-radius: 10px; 
+   background-color: var(--azulclaro);
+   display: flex;
+   flex-direction: column;
+   border: none;
+   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
 }
 section.info_cadastro > div#pendencia_c{
-    width: 30%;
-    height: 200px;
-    border: 1px solid black;
-    background-color:var(--azulclaro);
-    border-radius: 10px;
-    margin-right: 15px;
-    display: flex;
-    flex-direction: column;
-    border: none;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
+   width: 30%;
+   height: 200px;
+   border: 1px solid black;
+   background-color:var(--azulclaro);
+   border-radius: 10px;
+   margin-right: 15px;
+   display: flex;
+   flex-direction: column;
+   border: none;
+   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.599);
 }
 section.info_cadastro > div#pendencia_c >  h1{
-    margin: auto;
-    text-align: center;
-    font-size: 5em; 
-    color: var(--azulnormal);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.679);
+   margin: auto;
+   text-align: center;
+   font-size: 5em; 
+   color: var(--azulnormal);
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.679);
 }
 section.info_cadastro > div#total_c >  h1{
-    margin: auto;
-    text-align: center;
-    font-size: 5em; 
-    color: var(--azulnormal);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.656);
+   margin: auto;
+   text-align: center;
+   font-size: 5em; 
+   color: var(--azulnormal);
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.656);
 }
 section.info_cadastro > div#ultimos_c >  h1{
-    margin: auto;
-    text-align: center;
-    font-size: 5em; 
-    color: var(--azulnormal);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.677);
+   margin: auto;
+   text-align: center;
+   font-size: 5em; 
+   color: var(--azulnormal);
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.677);
 }
 section.info_cadastro > div#total_c > p{
    align-content: end;
@@ -282,40 +268,77 @@ section.info_cadastro > div#total_c > p{
 }
 section.info_cadastro > div#ultimos_c > p{
     
-    padding: 10px;
-    text-align: end;
-    font-family: var(--font-padrao);
-    text-shadow: 1px 1px 4px black; 
-    color: white;
-    background-color: var(--azulnormal);
-    border-radius: 0px 0px 10px 10px;
+   padding: 10px;
+   text-align: end;
+   font-family: var(--font-padrao);
+   text-shadow: 1px 1px 4px black; 
+   color: white;
+   background-color: var(--azulnormal);
+   border-radius: 0px 0px 10px 10px;
     
  }
  section.info_cadastro > div#pendencia_c > p{
-    align-content: end;
-    padding: 10px;
-    text-align: end;
-    font-family: var(--font-padrao);
-    text-shadow: 1px 1px 4px black; 
-    color: white;
-    background-color: var(--azulnormal); 
-    border-radius: 0px 0px 10px 10px;
+   align-content: end;
+   padding: 10px;
+   text-align: end;
+   font-family: var(--font-padrao);
+   text-shadow: 1px 1px 4px black; 
+   color: white;
+   background-color: var(--azulnormal); 
+   border-radius: 0px 0px 10px 10px;
  }
 section.ultimo_cadastros{
-    width: 75vw;
-    height: 56vh;
-    background-color: white;
-    margin: 35px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.589);
-   
-  
+   width: 77vw;
+   height: 67vh;
+   background-color: white;
+   margin: 35px;
+   border-radius: 10px;
+   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.589);
+    
 }
-section.ultimo_cadastros > div#rel_cada > ul {
-    padding: 25px;
-    list-style: none;
-    font-size: 1.2em;
+section.ultimo_cadastros > div#rel_cada > div#titulo_ultimo_cadastro  {
+    display: flex;
+    flex-direction: row;
 
+}
+
+section.ultimo_cadastros > div#rel_cada > div#titulo_ultimo_cadastro > div#title {
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    background-color: var(--azulescuro2);
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    width: 79vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div#icone_edit >  svg{
+    background-color: rgba(255, 255, 255, 0.385);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid white;  
+    cursor: pointer;
+}
+div#icone_edit >  svg:hover{
+    background-color: rgba(255, 255, 255, 0.522);
+    
+
+}
+
+
+
+section.ultimo_cadastros > div#rel_cada > ul {
+   padding: 25px;
+   list-style: none;
+   font-size: 1.2em;
+   margin-top: 10px;
+   text-align: center;
 }
 section.ultimo_cadastros > div#rel_cada > ul > li{
      display: flex;
@@ -324,27 +347,9 @@ section.ultimo_cadastros > div#rel_cada > ul > li{
      padding: 5px 30px;
      border-bottom: 1px  solid black;
      cursor: pointer;
-
-    }
- section.ultimo_cadastros > div#rel_cada > h2{
- 
- padding: 20px;
- text-align: left;
- margin-bottom: 10px;
- background-color: var(--azulescuro2);
- border-radius: 10px 10px 0px 0px ;
- color: white;
- text-shadow: 1px 1px 4px black;
-}
-
-section.ultimo_cadastros > div#rel_cada > ul{
-    margin-top: 10px;
-    text-align: center;
-
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
-
 }
 section.ultimo_cadastros > div#rel_cada > ul > li:hover{
    background-color: var(--azulnormal2);

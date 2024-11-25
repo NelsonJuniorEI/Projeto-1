@@ -86,18 +86,18 @@ nav{
  }
  div.menu > ul > li#home_icone:hover{
     background-color: #b4d5ff80;
-   border-radius: 5px; 
-   transition-duration: 0.6s;
+    border-radius: 5px; 
+    transition-duration: 0.6s;
 }
 div.menu > ul > li#cadastro_icone:hover{
-   background-color: #b4d5ff80;
-  border-radius: 5px; 
-  transition-duration: 0.6s;
+    background-color: #b4d5ff80;
+    border-radius: 5px; 
+    transition-duration: 0.6s;
 }
 div.menu > ul > li#relatorios_icone:hover{
-   background-color: #b4d5ff80;
-  border-radius: 5px; 
-  transition-duration: 0.6s;
+    background-color: #b4d5ff80;
+    border-radius: 5px; 
+    transition-duration: 0.6s;
 }
  div.menu > ul > svg{
     margin-right: 10px;
@@ -132,13 +132,11 @@ section.cabecalho{
     border-radius: 10px;
     margin-right: 6px;
     box-shadow: 1px 1px 4px black;
-
 }
 section.cabecalho > input{
     padding: 7px;
     width:45%;
-   margin: 0px;
-   
+    margin: 0px;
 }
 div#usuario_logo{
     height: 50px;
@@ -169,26 +167,28 @@ div#nomeusu{
     font-weight: bold;
 }
 section.cabecalho > div#sair{
-    width: 13%;
-  
-    
+    width: 13%; 
 }
-section.cabecalho > div#sair > input{
-    width: 50%;
-    height: 50%;
+section.cabecalho > div#sair > a{
+   
     font-size: 1.4em;
-    margin-top: 14px;
-    margin-left: 20px;
     background-color: #176B87;
-    border: none; 
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border: 1px solid rgba(255, 255, 255, 0.693);
     cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
 }
-section.cabecalho > div#sair > input:hover{
-    background-color: #1d8baf;
-    border: 1px solid white;
-    transition-duration: 0.4s;
+section.cabecalho > div#sair > a:hover{
+   background-color: #1d8baf;
+   border: 1px solid white;
+   transition-duration: 0.4s;
 }
 section.cabecalho > div#barra{
     background-color:var(--azulnormal);
@@ -209,39 +209,28 @@ section.ultimo_cadastros{
     margin: 9px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
-   
-    
-  
+}
+section.ultimo_cadastros > div#rel_cada > h2{
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 10px;
 }
 section.ultimo_cadastros > div#rel_cada > ul {
     padding: 25px;
     list-style: none;
     font-size: 1.2em;
-
-}
-section.ultimo_cadastros > div#rel_cada > ul > li{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 5px 30px;
-     border-bottom: 1px  solid rgba(0, 0, 0, 0.199);
-
-    }
- section.ultimo_cadastros > div#rel_cada > h2{
- 
- padding: 20px;
- text-align: left;
- margin-bottom: 10px;
-}
-
-section.ultimo_cadastros > div#rel_cada > ul{
     margin-top: 10px;
     text-align: center;
-
+}
+section.ultimo_cadastros > div#rel_cada > ul > li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    border-bottom: 1px  solid rgba(0, 0, 0, 0.199);
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
-
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo:hover{
     background-color: #FFFFFF;
@@ -253,15 +242,11 @@ section.ultimo_cadastros > div#rel_cada > ul > li:hover{
     background-color: var(--azulescuro2);
     border-radius: 10px 10px 0px 0px  ;
     color: white;
-    text-shadow: 1px 1px 3px black;
-    
+    text-shadow: 1px 1px 3px black;  
 }
-#rel_cada>ul>li>p>a{
+#rel_cada >  ul > li > p > a{
     text-decoration: none;
     color:black ;
-
-
-
 }
 #rel_cada>ul>li>p>a:hover{
     color: white;
