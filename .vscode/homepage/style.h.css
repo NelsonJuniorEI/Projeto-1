@@ -296,13 +296,12 @@ section.ultimo_cadastros{
    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.589);
     
 }
-section.ultimo_cadastros > div#rel_cada > div#titulo_ultimo_cadastro  {
+section.ultimo_cadastros > div#rel_cada > div#lista-colaboradores{
     display: flex;
     flex-direction: row;
 
 }
-
-section.ultimo_cadastros > div#rel_cada > div#titulo_ultimo_cadastro > div#title {
+section.ultimo_cadastros > div#rel_cada  > div#title {
     padding: 20px;
     text-align: left;
     margin-bottom: 10px;
@@ -310,43 +309,23 @@ section.ultimo_cadastros > div#rel_cada > div#titulo_ultimo_cadastro > div#title
     border-radius: 10px 10px 0px 0px;
     color: white;
     text-shadow: 1px 1px 4px black;
-    width: 79vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-div#icone_edit >  svg{
-    background-color: rgba(255, 255, 255, 0.385);
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 50%;
-    border: 1px solid white;  
-    cursor: pointer;
-}
-div#icone_edit >  svg:hover{
-    background-color: rgba(255, 255, 255, 0.522);
-    
 
 }
-
-
-
-section.ultimo_cadastros > div#rel_cada > ul {
-   padding: 25px;
-   list-style: none;
-   font-size: 1.2em;
-   margin-top: 10px;
-   text-align: center;
+section.ultimo_cadastros > div#rel_cada > ul.lista-colaborador {
+     padding: 25px;
+     list-style: none;
+     font-size: 1.2em;
+     margin-top: 10px;
+     text-align: center;
 }
-section.ultimo_cadastros > div#rel_cada > ul > li{
+section.ultimo_cadastros > div#rel_cada > ul.lista-colaborador > li{
      display: flex;
      align-items: center;
      justify-content: space-between;
      padding: 5px 30px;
-     border-bottom: 1px  solid black;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.452);
      cursor: pointer;
+     
 }
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
@@ -357,7 +336,15 @@ section.ultimo_cadastros > div#rel_cada > ul > li:hover{
 section.ultimo_cadastros > div#rel_cada > ul > li#titulo:hover{
     background-color: #FFFFFF;
 }
-
+section.ultimo_cadastros > div#rel_cada > ul > li > p {
+   width: 150px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+section.ultimo_cadastros > div#rel_cada > ul > li > p > abbr{
+   text-decoration: none;
+}
 
     
     

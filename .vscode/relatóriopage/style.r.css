@@ -32,6 +32,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
     
 
 nav{
@@ -118,9 +121,10 @@ div.menu > ul > li#relatorios_icone:hover{
  
 main{
     height: 100%;
-    width: 80%;
+    width: 78%;
     background-color:var(--azulclaro3);
     font-family: var(--font-padrao);
+    padding: 10px;
 }
 section.cabecalho{
     background-color:var(--azulescuro2) ;
@@ -130,7 +134,6 @@ section.cabecalho{
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    margin-right: 6px;
     box-shadow: 1px 1px 4px black;
 }
 section.cabecalho > input{
@@ -183,7 +186,7 @@ section.cabecalho > div#sair > a{
     display: flex;
     justify-content: center;
     margin: 10px;
-    
+
 }
 section.cabecalho > div#sair > a:hover{
    background-color: #1d8baf;
@@ -203,7 +206,7 @@ section.cabecalho > div#barra{
 
 
 section.ultimo_cadastros{
-    width: 79vw;
+    width: 99%;
     height: 90vh;
     background-color: white;
     margin: 9px;

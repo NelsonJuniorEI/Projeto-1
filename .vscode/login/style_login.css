@@ -139,6 +139,7 @@ form > input[type= button]:hover{
     margin: 10px 0px ;
     border-radius: 5px;
 }
+
 div.campo > span{
     color:var(--azulescuro2);
     font-size: 2em;

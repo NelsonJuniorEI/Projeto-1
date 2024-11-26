@@ -14,6 +14,7 @@
  const btncadastro = document.querySelector('#btnovo_colaborador')
  const pesquisar= document.querySelector(".pesquisar")
 
+
  
  
  
@@ -108,8 +109,9 @@ alert('usuário criado')
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
-   item.innerHTML = `<p>${colaborador.valorFname}</p> <p>${colaborador.valorFemail}</p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
+   item.innerHTML = `<p><abbr title="${colaborador.valorFname}">${colaborador.valorFname}</abbr> </p> <p><abbr title="${colaborador.valorFemail}">${colaborador.valorFemail}</abbr> </p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
    lista.appendChild(item)
+
 }
 
 function carregarLista(){
@@ -132,6 +134,7 @@ function totalCadastro(){
    colaboradores.forEach(itens=>{
       if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
          pendentes = pendentes+1; 
+         return
       }
          
 
@@ -158,3 +161,8 @@ function pesquisarInput(){
 function imprimir(){
    window.print()
 }
+
+
+
+
+
