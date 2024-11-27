@@ -1,13 +1,18 @@
 @charset "UTF-8";
+
 nav{
     display: none;
-
+}
+main{
+    width: 100%;
+    margin: auto;
+}
+section.info_cadastros{
+    box-shadow: none;
 }
 section.cabecalho{
     display: none;
-
 }
-
 section.info_cadastros > div#rel_cada >h2 > input{
     display: none;
 }

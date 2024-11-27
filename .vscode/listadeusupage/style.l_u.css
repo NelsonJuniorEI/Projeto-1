@@ -28,7 +28,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    
 }
 body::-webkit-scrollbar{
     display: none;
@@ -111,16 +111,15 @@ div.menu > ul > li#relatorios_icone:hover{
  }
 main{
     height:100%;
-    width:78%;
-    padding: 10px;
+    width:80%;
     background-color:var(--azulclaro3);
     font-family:var(--font-padrao);
 }
 section.cabecalho{
     background-color:var(--azulescuro2) ;
     text-align: center;
-    padding: 12px;
-    margin: 9px;
+    padding: 20px;
+    margin: 9px 1%;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
@@ -138,13 +137,15 @@ div#usuario_logo{
     border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 48%;
     display: inline-block;
-    margin-left: 283px;
+    margin-left: 252px;
+    position: relative;
 }
 div#usuario_logo > svg{
     display: flex;
     width: 51px;
     height: 41px;
     margin-top: 4px;
+
 }
 div#nomeusu{
     color: white;
@@ -158,8 +159,7 @@ div#nomeusu{
     font-weight: bold;
 }
 section.cabecalho > div#sair{
-    width: 13%;
-    font-family: var(--font-padrao);
+    width: 13%; 
 }
 section.cabecalho > div#sair > a{
    
@@ -175,6 +175,7 @@ section.cabecalho > div#sair > a{
     display: flex;
     justify-content: center;
     margin: 10px;
+
 }
 section.cabecalho > div#sair > a:hover{
    background-color: #1d8baf;
@@ -191,12 +192,13 @@ section.cabecalho > div#barra{
     margin-right: 20px;
     box-shadow: 1px 1px 4px black;
 }
+
 section.info_cadastros{
-    width: 99%;
+    width: 96.7%;
     height: 90vh;
     padding: 10px;
     background-color: white;
-    margin: 9px;
+    margin: 9px 1%;
     border-radius: 10px;
     position: relative;
     font-family: var(--font-padrao);
@@ -213,23 +215,23 @@ section.info_cadastros{
     font-family: var(--font-padrao);
     border-radius: 5px;
     border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.422);
 }
 section.info_cadastros > div#rel_cada > h2{
-    padding: 20px;
+    padding: 35px;
     text-align: left;
     margin-bottom: 10px;
 }
 section.info_cadastros > div#rel_cada > h2 > input {
-    margin-left: 90%;
-    margin-bottom: 30px;
+   
     color: white;
     width: 200px;
     height: 30px;
     font-size: 0.8em;
+    margin-top: 23px;
 }
 section.info_cadastros > div#rel_cada > h2 > input:hover{
     background-color: #186d89;
-    border: 1px solid white;
     transition-duration: 0.4s;
 }
 section.info_cadastros > div#rel_cada > ul {
@@ -246,9 +248,16 @@ section.info_cadastros > div#rel_cada > ul > li{
     padding: 5px 30px;
     border-bottom: 1px  solid black;
     cursor: pointer;
-
 }
-
+section.info_cadastros > div#rel_cada > ul > li > p{
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+section.info_cadastros > div#rel_cada > ul > li > p > abbr{
+    text-decoration: none;
+}
 section.info_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
 }

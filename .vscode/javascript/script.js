@@ -29,19 +29,14 @@
 
  } )
 
-  btentrar.addEventListener("click" , (event)=>{
-   // event.preventDefault()
- alert("clicou")
-   //  validarCampos()
- })
- 
 
+ 
+    // Redirecionamento para página home 
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }
-
  
-    //  validar o campo
+    // validação da entrada na página de login
 function validarCampos(event){
     event.preventDefault()
     let valorEmail = email.value 
@@ -60,10 +55,10 @@ function validarCampos(event){
 
          window.location.href = "../homepage/home.html"      
 
-   }
+   } else {alert("Senha ou E-mail inválidos!")}
 
 }
-    // Validação do login, @ e .com no e-mail e senha.
+    //Criação de um usuário por meio do formulário
 function criarUsuario (){
    
     let valorFname = formname.value
@@ -104,8 +99,8 @@ function criarUsuario (){
 localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
 alert('usuário criado')
 
- 
 }
+// Comando para criar lista do colaborador ( com comando para quebrar e abreviar grandes nomes)
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
@@ -113,7 +108,7 @@ function criarLista (colaborador){
    lista.appendChild(item)
 
 }
-
+// Comando para carregar a lista 
 function carregarLista(){
 
    const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
@@ -123,7 +118,7 @@ function carregar(){
    carregarLista()
    totalCadastro()
 }
-
+// Comando para exibir o número de  presentes num  grupo por determinada característica 
 function totalCadastro(){
    const total= document.querySelector("#total")
    const vazio= document.querySelector("#pendente")

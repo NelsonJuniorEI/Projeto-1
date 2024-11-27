@@ -35,7 +35,6 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
-    
 
 nav{
     height: 1024px;
@@ -45,22 +44,21 @@ nav{
 }
  div.logo{
     margin: auto;
-    margin-top: 57%;
+    margin-top:57%;
     padding: 20px;
     width: 218px;
-    background-color:white;
+    background-color: white;
     display: flex;
     flex-direction:row ;
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 6px black;
-    font-family: var(--font-destaque);
+    font-family: var(--font-destaque)
     
  }
  div.logo > p{
     padding-left: 10px;
     margin-left: 10px;
-    
    
  }
  div.menu {
@@ -69,6 +67,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  
    
  }
  div.menu > ul {
@@ -76,7 +75,7 @@ nav{
     justify-content: start;
     flex-direction: column;
     align-items: start;
-     list-style: none;
+    list-style: none;
      
  }
  div.menu > ul > li{
@@ -86,21 +85,22 @@ nav{
     border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
+
  }
  div.menu > ul > li#home_icone:hover{
     background-color: #b4d5ff80;
-    border-radius: 5px; 
-    transition-duration: 0.6s;
+   border-radius: 5px; 
+   transition-duration: 0.6s;
 }
-div.menu > ul > li#cadastro_icone:hover{
-    background-color: #b4d5ff80;
-    border-radius: 5px; 
-    transition-duration: 0.6s;
+div.menu > ul > li#cadastros_icone:hover{
+   background-color: #b4d5ff80;
+  border-radius: 5px; 
+  transition-duration: 0.6s;
 }
 div.menu > ul > li#relatorios_icone:hover{
-    background-color: #b4d5ff80;
-    border-radius: 5px; 
-    transition-duration: 0.6s;
+   background-color: #b4d5ff80;
+  border-radius: 5px; 
+  transition-duration: 0.6s;
 }
  div.menu > ul > svg{
     margin-right: 10px;
@@ -108,7 +108,6 @@ div.menu > ul > li#relatorios_icone:hover{
     width: 40px;
     padding: 5px;
     margin-right: 10px;
-    color: white;
  }
  div.menu > ul > li > a{
     display: block;
@@ -118,19 +117,17 @@ div.menu > ul > li#relatorios_icone:hover{
     color: white;
     text-shadow: 1px 1px 4px black;
  }
- 
 main{
     height: 100%;
-    width: 78%;
+    width: 80%;
     background-color:var(--azulclaro3);
     font-family: var(--font-padrao);
-    padding: 10px;
 }
 section.cabecalho{
     background-color:var(--azulescuro2) ;
     text-align: center;
-    padding: 12px;
-    margin: 9px;
+    padding: 20px;
+    margin: 9px 1%;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
@@ -148,7 +145,7 @@ div#usuario_logo{
     border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 48%;
     display: inline-block;
-    margin-left: 283px;
+    margin-left: 252px;
     position: relative;
 }
 div#usuario_logo > svg{
@@ -206,10 +203,10 @@ section.cabecalho > div#barra{
 
 
 section.ultimo_cadastros{
-    width: 99%;
+    width: 97.8%;
     height: 90vh;
     background-color: white;
-    margin: 9px;
+    margin: 9px 1%;
     border-radius: 10px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
 }

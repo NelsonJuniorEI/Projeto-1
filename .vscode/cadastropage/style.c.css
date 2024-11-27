@@ -31,8 +31,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-    
-
+body::-webkit-scrollbar{
+    display: none;
+}
 nav{
     height: 1024px;
     width: 20%;
@@ -124,12 +125,12 @@ main{
 section.cabecalho{
     background-color:var(--azulescuro2) ;
     text-align: center;
-    padding: 12px;
-    margin: 9px;
+    padding: 20px;
+    margin: 9px 1%;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    margin-right: 6px;
+   
     box-shadow: 1px 1px 4px black;
 }
 section.cabecalho > input{
@@ -145,7 +146,7 @@ div#usuario_logo{
     border: 2px solid rgba(197, 197, 197, 0.842);
     border-radius: 50%;
     display: inline-block;
-    margin-left: 283px;
+    margin-left: 252px;
 }
 div#usuario_logo > svg{
     display: flex;
@@ -214,16 +215,13 @@ section.cabecalho > div#barra{
     cursor: pointer;
 }
 
-section.info_cadastros > div#rel_cada > h2 > input:hover{
-    background-color:#67fc3eb5;
-    transition-duration: 0.4s ;
-}
+
 
 section.info_cadastros{
-    width: 79vw;
+    width: 97.8%;
     height: 90vh;
     background-color: white;
-    margin: 9px;
+    margin: 9px 1%;
     border-radius: 10px;
     position: relative;
     font-family: var(--font-padrao);
@@ -232,6 +230,10 @@ section.info_cadastros{
 
 }
 
+section.info_cadastros > div#rel_cada > h2 > input:hover{
+    background-color:#67fc3eb5;
+    transition-duration: 0.4s ;
+}
  section.info_cadastros > div#rel_cada > h2{
  
  padding: 20px;

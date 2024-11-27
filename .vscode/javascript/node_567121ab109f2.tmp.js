@@ -20,19 +20,9 @@
     senha:123
  }
  btgravar.addEventListener("click", (event) =>{
-  debugger
     event.preventDefault() 
      criarUsuario ()
-
  } )
-//  botão click
-
-//   btentrar.addEventListener("click" , (event)=>{
-//    event.preventDefault()
-
-//  validarCampos()
-//  })
-//  botão de abrir campo de cadastro
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }

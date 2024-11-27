@@ -30,6 +30,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+body::-webkit-scrollbar{
+   display: none;
+}
 nav{
     height: 1024px;;
     width: 20%;
@@ -114,12 +117,11 @@ div.menu > ul > li#relatorios_icone:hover{
 section.cabecalho{
     background-color:var(--azulescuro2) ;
     text-align: center;
-    padding: 12px;
-    margin: 9px;
+    padding: 20px;
+    margin: 9px 1%;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    margin-right: 6px;
     box-shadow: 1px 1px 4px black;
 }
 section.cabecalho > input{
@@ -134,7 +136,7 @@ div#usuario_logo{
    border: 2px solid rgba(197, 197, 197, 0.842);
    border-radius: 50%;
    display: inline-block;
-   margin-left: 283px;
+   margin-left: 252px;
 }
 div#usuario_logo > svg{
    display: flex;
@@ -193,12 +195,11 @@ section.info_cadastro {
    flex-direction: row;
    justify-content: space-between;
    padding: 10px;
-   padding-left: 10px ;
    position: relative;
    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.599);
-   border-radius: 5px;
-   width: 94%;
-   margin: 33px;
+   border-radius: 4px;
+   width: 95.8%;
+   margin: 12px;
    margin-top: 28px;
 }
 section.info_cadastro > div#total_c {
@@ -229,7 +230,7 @@ section.info_cadastro > div#pendencia_c{
    border: 1px solid black;
    background-color:var(--azulclaro);
    border-radius: 10px;
-   margin-right: 15px;
+   
    display: flex;
    flex-direction: column;
    border: none;
@@ -288,12 +289,12 @@ section.info_cadastro > div#ultimos_c > p{
    border-radius: 0px 0px 10px 10px;
  }
 section.ultimo_cadastros{
-   width: 77vw;
-   height: 67vh;
-   background-color: white;
-   margin: 35px;
-   border-radius: 10px;
-   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.589);
+   width: 97.8%;
+    height: 90vh;
+    background-color: white;
+    margin: 9px 1%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.644);
     
 }
 section.ultimo_cadastros > div#rel_cada > div#lista-colaboradores{
