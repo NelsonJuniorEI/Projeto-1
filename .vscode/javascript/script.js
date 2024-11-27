@@ -60,7 +60,7 @@ function validarCampos(event){
 }
     //Criação de um usuário por meio do formulário
 function criarUsuario (){
-   
+   debugger
     let valorFname = formname.value
     let valorFidade = formidade.value
     let valorFemail = formemail.value
@@ -129,7 +129,7 @@ function totalCadastro(){
    colaboradores.forEach(itens=>{
       if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
          pendentes = pendentes+1; 
-         return
+         
       }
          
 

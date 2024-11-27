@@ -240,21 +240,21 @@ section.info_cadastro > div#pendencia_c >  h1{
    margin: auto;
    text-align: center;
    font-size: 5em; 
-   color: var(--azulnormal);
+   color: #17a1cf;
    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.679);
 }
 section.info_cadastro > div#total_c >  h1{
    margin: auto;
    text-align: center;
    font-size: 5em; 
-   color: var(--azulnormal);
+   color: #17a1cf;
    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.656);
 }
 section.info_cadastro > div#ultimos_c >  h1{
    margin: auto;
    text-align: center;
    font-size: 5em; 
-   color: var(--azulnormal);
+   color: #17a1cf;
    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.677);
 }
 section.info_cadastro > div#total_c > p{
@@ -264,7 +264,7 @@ section.info_cadastro > div#total_c > p{
    font-family: var(--font-padrao);
    text-shadow: 1px 1px 4px black;
    color: white;
-   background-color: var(--azulnormal); 
+   background-color: var(--azulescuro2); 
    border-radius: 0px 0px 10px 10px;
 }
 section.info_cadastro > div#ultimos_c > p{
@@ -274,7 +274,7 @@ section.info_cadastro > div#ultimos_c > p{
    font-family: var(--font-padrao);
    text-shadow: 1px 1px 4px black; 
    color: white;
-   background-color: var(--azulnormal);
+   background-color: var(--azulescuro2);
    border-radius: 0px 0px 10px 10px;
     
  }
@@ -285,7 +285,7 @@ section.info_cadastro > div#ultimos_c > p{
    font-family: var(--font-padrao);
    text-shadow: 1px 1px 4px black; 
    color: white;
-   background-color: var(--azulnormal); 
+   background-color: var(--azulescuro2); 
    border-radius: 0px 0px 10px 10px;
  }
 section.ultimo_cadastros{

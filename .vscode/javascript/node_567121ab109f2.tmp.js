@@ -42,9 +42,9 @@ function validarCampos(){
    }
    if (valorEmail == usuario.nome && valorSenha == usuario.senha)
    {
-    window.location.href = "./homepage/home.2.html"
+    window.location.href = "./homepage/home.html"
 
-         window.location.href = "../homepage/home.2.html"
+         window.location.href = "../homepage/home.html"
 
    }
 
