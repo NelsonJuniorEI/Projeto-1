@@ -104,7 +104,7 @@ alert('usuário criado')
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
-   item.innerHTML = `<p><abbr title="${colaborador.valorFname}">${colaborador.valorFname}</abbr> </p> <p><abbr title="${colaborador.valorFemail}">${colaborador.valorFemail}</abbr> </p> <p>${colaborador.valorAtivo?"ativo": "desativo"}</p>`
+   item.innerHTML = `<p><abbr title="${colaborador.valorFname}">${colaborador.valorFname}</abbr> </p> <p><abbr title="${colaborador.valorFemail}">${colaborador.valorFemail}</abbr> </p> <p>${colaborador.valorAtivo?"ativo": "inativo"}</p>`
    lista.appendChild(item)
 
 }
@@ -126,6 +126,7 @@ function totalCadastro(){
    const colaboradores =  JSON.parse(localStorage.getItem('colaboradores'))
    let numeroColaboradores= colaboradores.length
    let pendentes=0;
+   // Conta o número de colaboradores com informações pendentes
    colaboradores.forEach(itens=>{
       if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
          pendentes = pendentes+1; 
@@ -134,6 +135,7 @@ function totalCadastro(){
          
 
    });
+   // Atribuindo valores para as devidas variáveis 
    const cadastroAtivo=colaboradores.filter(itens=> itens.valorAtivo==true)
    let cadastrosAtivos= cadastroAtivo.length
    vazio.innerHTML=pendentes;
