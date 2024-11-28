@@ -82,7 +82,7 @@ function criarUsuario (){
      valorAtivo
     
  }
- 
+//  Armazendo o colaborador e seus dados no local storage
 localStorage.setItem("colaboradores" , JSON.stringify(colaborador))
 criarLista(colaborador)
 alert('usuário criado')

@@ -17,20 +17,18 @@
 
  
  
- 
+//  Variável com informação para login
  const usuario = {
     nome:"junin@gmail.com",
     senha: 123
  }
+//  Dando funcionalidade de coletar as informações do colaborador no botão gravar
  btgravar.addEventListener("click", (event) =>{
-  debugger
     event.preventDefault() 
      criarUsuario ()
 
  } )
 
-
- 
     // Redirecionamento para página home 
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
@@ -60,7 +58,7 @@ function validarCampos(event){
 }
     //Criação de um usuário por meio do formulário
 function criarUsuario (){
-   debugger
+
     let valorFname = formname.value
     let valorFidade = formidade.value
     let valorFemail = formemail.value
@@ -80,7 +78,7 @@ function criarUsuario (){
         formemail.style.border = "3px solid red"
         return
     }
-    
+// Atribuindo os valores coletados para a variável de colaborador
  const colaborador = {
     valorFname,
      valorFidade ,
@@ -95,7 +93,7 @@ function criarUsuario (){
  }
  const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
  colaboradores.push(colaborador)
- 
+//  Aviso de que o usuário já está criado (consequentemente armazenado no local storage)
 localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
 alert('usuário criado')
 
@@ -142,7 +140,7 @@ function totalCadastro(){
    total.innerHTML= numeroColaboradores;
    ativos.innerHTML= cadastrosAtivos
 }
-
+// Comando de funcionalidade na barra de pesquisa 
 function pesquisarInput(){
    const lista = document.querySelector(".lista-colaborador")
    const  colaboradores= JSON.parse(localStorage.getItem("colaboradores"))
@@ -155,6 +153,7 @@ function pesquisarInput(){
    })
 
 }
+// Função para imprimir a lista 
 function imprimir(){
    window.print()
 }
