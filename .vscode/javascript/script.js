@@ -29,7 +29,7 @@
 
  } )
 
-    // Redirecionamento para página home 
+    // Redirecionamento para página relatório 
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }
@@ -104,14 +104,14 @@ function criarLista (colaborador){
    const item = document.createElement("li")
    item.innerHTML = `<p><abbr title="${colaborador.valorFname}">${colaborador.valorFname}</abbr> </p> <p><abbr title="${colaborador.valorFemail}">${colaborador.valorFemail}</abbr> </p> <p>${colaborador.valorAtivo?"ativo": "inativo"}</p>`
    lista.appendChild(item)
-
 }
-// Comando para carregar a lista 
+// Comando para percorrer e pegar cada array para ser colocado na lista 
 function carregarLista(){
 
    const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
    colaboradores.forEach(colaborador => criarLista(colaborador) );
 }
+// Comando para recarregar a lista 
 function carregar(){
    carregarLista()
    totalCadastro()
@@ -124,13 +124,11 @@ function totalCadastro(){
    const colaboradores =  JSON.parse(localStorage.getItem('colaboradores'))
    let numeroColaboradores= colaboradores.length
    let pendentes=0;
-   // Conta o número de colaboradores com informações pendentes
+   // Per corre cada array e verifica suas informações e conta o número de colaboradores com informações pendentes
    colaboradores.forEach(itens=>{
       if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
-         pendentes = pendentes+1; 
-         
-      }
-         
+         pendentes = pendentes+1;      
+}
 
    });
    // Atribuindo valores para as devidas variáveis 
@@ -141,7 +139,7 @@ function totalCadastro(){
    ativos.innerHTML= cadastrosAtivos
 }
 // Comando de funcionalidade na barra de pesquisa 
-function pesquisarInput(){
+function pesquisarInput(){ 
    const lista = document.querySelector(".lista-colaborador")
    const  colaboradores= JSON.parse(localStorage.getItem("colaboradores"))
    let valor = pesquisar.value.toLowerCase()
@@ -157,6 +155,7 @@ function pesquisarInput(){
 function imprimir(){
    window.print()
 }
+
 
 
 
