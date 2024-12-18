@@ -102,20 +102,20 @@ alert('usuário criado')
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
-   item.innerHTML = `<p><abbr title="${colaborador.valorFname}">${colaborador.valorFname}</abbr> </p> <p><abbr title="${colaborador.valorFemail}">${colaborador.valorFemail}</abbr> </p> <p>${colaborador.valorAtivo?"ativo": "inativo"}</p>`
+   item.innerHTML = `<p><abbr title="${colaborador.nome}">${colaborador.nome}</abbr> </p> <p><abbr title="${colaborador.email}">${colaborador.email}</abbr> </p> <p>${colaborador.status?"ativo": "inativo"}</p>`
    lista.appendChild(item)
 }
 // Comando para percorrer e pegar cada array para ser colocado na lista 
-function carregarLista(){
- 
- 
+async function carregarLista(){
+   // const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
+   var response = await fetch ("https://localhost:7034/api/Colaboradores")
+   var colaboradores = await response.json()
+   colaboradores.forEach(colaborador => criarLista(colaborador) );
+  
 }
- 
-
-
 
 // Comando para recarregar a lista 
-function carregar(){
+async function carregar(){
    carregarLista()
    totalCadastro()
 }
