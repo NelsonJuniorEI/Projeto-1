@@ -107,10 +107,13 @@ function criarLista (colaborador){
 }
 // Comando para percorrer e pegar cada array para ser colocado na lista 
 function carregarLista(){
-
-   const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
-   colaboradores.forEach(colaborador => criarLista(colaborador) );
+ 
+ 
 }
+ 
+
+
+
 // Comando para recarregar a lista 
 function carregar(){
    carregarLista()
