@@ -255,7 +255,7 @@ section.form_cadastros > div#rel_cada > ul {
 section.form_cadastros > div#rel_cada > ul > li{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1px 0px;
      
 }
@@ -373,5 +373,40 @@ div.botao_atividade > input#iatividade{
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.29);
 }
+#lixeira{
+    margin: 5px;
+    background-color: rgba(224, 224, 224, 0.514);
+    border:1.2px solid rgba(0, 0, 0, 0.301) ;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
+    border-radius: 4px;
+    cursor: pointer;
+   
+   }
+   #lixeira:hover{
+     
+       background-color: rgba(163, 163, 163, 0.356);
+       border:1.3px solid rgba(0, 0, 0, 0.863) ;
+       border-radius: 4px;
+       transition-duration: 0.2s;
+       cursor: pointer;
+      
+      }
+   #editar{
+       margin: 5px;
+       background-color: rgba(224, 224, 224, 0.514);
+       border:1.2px solid rgba(0, 0, 0, 0.301) ;
+       box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
+       border-radius: 4px;
+       cursor: pointer;
+      }
+      #editar:hover{
+       background-color: rgba(163, 163, 163, 0.356);
+       border:1.3px solid rgba(0, 0, 0, 0.863) ;
+       border-radius: 4px;
+       transition-duration: 0.2s;
+       cursor: pointer;
+      
+      }
+   
 
 

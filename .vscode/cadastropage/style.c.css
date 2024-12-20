@@ -236,9 +236,9 @@ section.info_cadastros > div#rel_cada > h2 > input:hover{
 }
  section.info_cadastros > div#rel_cada > h2{
  
- padding: 20px;
- text-align: left;
- margin-bottom: 10px;
+  padding: 26px;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 section.info_cadastros > div#rel_cada > h2  {
@@ -248,11 +248,12 @@ section.info_cadastros > div#rel_cada > h2  {
   border-radius: 10px 10px 0px 0px ;
 }
 section.info_cadastros > div#rel_cada > h2 > input {
-    color: white;
-    width: 200px;
-    height: 30px;
-    font-size: 0.8em;
+   color: white;
+   width: 200px;
+   height: 30px;
+   font-size: 0.8em;
    margin: auto;
+   margin-top: 10px;
 }
 
 section.info_cadastros > div#rel_cada > ul {
@@ -265,7 +266,7 @@ section.info_cadastros > div#rel_cada > ul {
 section.info_cadastros > div#rel_cada > ul > li{
      display: flex;
      align-items: center;
-     justify-content: space-between;
+     justify-content: space-around;
      padding: 5px 30px;
      border-bottom: 1px  solid rgba(0, 0, 0, 0.336);
 }
@@ -284,7 +285,7 @@ section.info_cadastros > div#rel_cada > ul > li#titulo:hover{
 
 }
 section.info_cadastros > div#rel_cada > ul > li:hover{
-    background-color: var(--azulnormal2);
+    background-color:#7ab2d336;
 
 }
 section.info_cadastros > div#rel_cada > ul > li > p {
@@ -296,4 +297,39 @@ section.info_cadastros > div#rel_cada > ul > li > p {
  section.info_cadastros > div#rel_cada > ul > li > p > abbr{
     text-decoration: none;
  }
-
+ #lixeira{
+    margin: 5px;
+    background-color: rgba(224, 224, 224, 0.514);
+    border:1.2px solid rgba(0, 0, 0, 0.301) ;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
+    border-radius: 4px;
+    cursor: pointer;
+   
+   }
+   #lixeira:hover{
+     
+       background-color: rgba(163, 163, 163, 0.356);
+       border:1.3px solid rgba(0, 0, 0, 0.863) ;
+       border-radius: 4px;
+       transition-duration: 0.2s;
+       cursor: pointer;
+      
+      }
+   #editar{
+       margin: 5px;
+       background-color: rgba(224, 224, 224, 0.514);
+       border:1.2px solid rgba(0, 0, 0, 0.301) ;
+       box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
+       border-radius: 4px;
+       cursor: pointer;
+      }
+      #editar:hover{
+       background-color: rgba(163, 163, 163, 0.356);
+       border:1.3px solid rgba(0, 0, 0, 0.863) ;
+       border-radius: 4px;
+       transition-duration: 0.2s;
+       cursor: pointer;
+      
+      }
+   
+ 
