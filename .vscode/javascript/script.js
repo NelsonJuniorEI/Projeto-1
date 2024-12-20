@@ -57,7 +57,7 @@ function validarCampos(event){
 
 }
     //Criação de um usuário por meio do formulário
-function criarUsuario (){
+async function criarUsuario (){
 
     let valorFname = formname.value
     let valorFidade = formidade.value
@@ -80,6 +80,7 @@ function criarUsuario (){
     }
 // Atribuindo os valores coletados para a variável de colaborador
  const colaborador = {
+
     valorFname,
      valorFidade ,
      valorFemail ,
@@ -91,13 +92,26 @@ function criarUsuario (){
      valorAtivo
     
  }
- const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
- colaboradores.push(colaborador)
-//  Aviso de que o usuário já está criado (consequentemente armazenado no local storage)
-localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
-alert('usuário criado')
+const response = await fetch (`https://localhost:7034/api/Colaboradores`, {
+   method : 'Post',
+   headers : {
+      'Content-Type':'application/json'
+   },
+   body: JSON.stringify(colaborador)
+});
+
+alert ('Usuário Criado !')
 
 }
+
+
+//  const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
+//  colaboradores.push(colaborador)
+//  Aviso de que o usuário já está criado (consequentemente armazenado no local storage)
+// localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
+// alert('usuário criado')
+
+
 // Comando para criar lista do colaborador ( com comando para quebrar e abreviar grandes nomes)
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
@@ -113,7 +127,6 @@ async function carregarLista(){
    colaboradores.forEach(colaborador => criarLista(colaborador) );
   
 }
-
 // Comando para recarregar a lista 
 async function carregar(){
    carregarLista()
@@ -142,18 +155,20 @@ function totalCadastro(){
    ativos.innerHTML= cadastrosAtivos
 }
 // Comando de funcionalidade na barra de pesquisa 
-function pesquisarInput(){ 
+async function pesquisarInput(){ 
    const lista = document.querySelector(".lista-colaborador")
-   const  colaboradores= JSON.parse(localStorage.getItem("colaboradores"))
+   const response = await fetch ("https://localhost:7034/api/Colaboradores")
+   const  colaboradores= await response.json()
    let valor = pesquisar.value.toLowerCase()
    lista.innerHTML=""
    colaboradores.forEach(colaborador=>{
-      if(colaborador.valorFname.toLowerCase().includes(valor)){
+      if(colaborador.nome.toLowerCase().includes(valor)){
          criarLista(colaborador)
       }
    })
 
 }
+
 // Função para imprimir a lista 
 function imprimir(){
    window.print()
