@@ -277,13 +277,26 @@ section.info_cadastros > div#rel_cada > ul{
 }
 section.info_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
-
+    margin-left: 3px;
+    padding: 10px;
+    padding-left: 31px;
+    margin-right: -10px;
 }
+ 
+
+section.info_cadastros > div#rel_cada > ul > li#titulo > p#st{
+    margin-left: 49px;
+}
+p#fun{
+    padding-right: 7px;
+}
+
 section.info_cadastros > div#rel_cada > ul > li#titulo:hover{
     background-color: #FFFFFF;
     transition: transform .5s ;
 
 }
+
 section.info_cadastros > div#rel_cada > ul > li:hover{
     background-color:#7ab2d336;
 

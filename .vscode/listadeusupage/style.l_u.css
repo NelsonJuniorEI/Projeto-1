@@ -260,7 +260,18 @@ section.info_cadastros > div#rel_cada > ul > li > p > abbr{
 }
 section.info_cadastros > div#rel_cada > ul > li#titulo{
     color: var(--azulescuro2);
+    margin-left: 3px;
+    padding: 10px;
+    padding-left: 31px;
+    margin-right: -10px;
 }
+ p#st{
+    margin-left: 49px;
+}
+p#fun{
+    padding-right: 7px;
+}
+
 section.info_cadastros > div#rel_cada > ul > li#titulo:hover{
     background-color: #FFFFFF;
 }

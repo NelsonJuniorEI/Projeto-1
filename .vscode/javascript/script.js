@@ -58,7 +58,7 @@ function validarCampos(event){
 }
     //Criação de um usuário por meio do formulário
 async function criarUsuario (){
-
+debugger
     let valorFname = formname.value
     let valorFidade = formidade.value
     let valorFemail = formemail.value
@@ -81,58 +81,68 @@ async function criarUsuario (){
 // Atribuindo os valores coletados para a variável de colaborador
  const colaborador = {
 
-    valorFname,
-     valorFidade ,
-     valorFemail ,
-     valorFendereco,
-     valorFoutrasinfo ,
-     valorFinteresses,
-     valorFsentimentos ,
-     valorFvalor ,
-     valorAtivo
+    nome:valorFname,
+     idade:valorFidade ,
+     email:valorFemail ,
+     endereco:valorFendereco,
+     outrasInfos:valorFoutrasinfo ,
+     interesses:valorFinteresses,
+     sentimentos:valorFsentimentos ,
+     valores:valorFvalor ,
+     status:valorAtivo
     
  }
-const response = await fetch (`https://localhost:7034/api/Colaboradores`, {
-   method : 'Post',
+
+try{
+   const response = await fetch(`https://localhost:7034/api/Colaboradores`, {
+   method : 'POST',
    headers : {
       'Content-Type':'application/json'
    },
-   body: JSON.stringify(colaborador)
+   body: JSON.stringify(colaborador),       
 });
-
+if(!response.ok){
+   const error = await response.json()
+   throw new Error(error.mensage || 'Erro de cadastro')    
+}
 alert ('Usuário Criado !')
-
+} catch(error){
+   console.error('Erro ao cadastrar colaborador', error) 
 }
 
 
+
+}
 //  const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
 //  colaboradores.push(colaborador)
 //  Aviso de que o usuário já está criado (consequentemente armazenado no local storage)
 // localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
 // alert('usuário criado')
 
-
 // Comando para criar lista do colaborador ( com comando para quebrar e abreviar grandes nomes)
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
    item.innerHTML = `<p><abbr title="${colaborador.nome}">${colaborador.nome}</abbr> </p> <p><abbr title="${colaborador.email}">${colaborador.email}</abbr> </p> <p>${colaborador.status?"ativo": "inativo"}  </p> 
-         <button id="editar">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" ><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
-         </button>
-       <button>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" m><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-             </p>
-       </button>`
+         <div id="btns">
+            <button id="editar">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" ><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+            </button>
+                   <button id="lixeira">
+             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" m><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                </p>
+                   </button>
+                    </div>`
+        
    lista.appendChild(item)
 }
+
 // Comando para percorrer e pegar cada array para ser colocado na lista 
 async function carregarLista(){
    // const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
    var response = await fetch ("https://localhost:7034/api/Colaboradores")
    var colaboradores = await response.json()
    colaboradores.forEach(colaborador => criarLista(colaborador) );
-  
 }
 // Comando para recarregar a lista 
 async function carregar(){
@@ -173,9 +183,7 @@ async function pesquisarInput(){
          criarLista(colaborador)
       }
    })
-
 }
-
 // Função para imprimir a lista 
 function imprimir(){
    window.print()
