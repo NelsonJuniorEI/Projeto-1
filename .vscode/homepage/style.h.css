@@ -361,9 +361,6 @@ section.ultimo_cadastros > div#rel_cada > ul > li > p {
 section.ultimo_cadastros > div#rel_cada > ul > li > p > abbr{
    text-decoration: none;
 }
-div#btns{
-   
-}
 #lixeira{
    margin: 5px;
    background-color: rgba(224, 224, 224, 0.514);

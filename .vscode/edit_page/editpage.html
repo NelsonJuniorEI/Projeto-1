@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação Curiosidade</title>
+    <link rel="stylesheet" href="style.editpage.css">
+</head>
+<body onload = "carregaredit()">
+   <main>
+    <section class="form_cadastros">
+        <div id="titulo">
+            <h1>Editar</h1>
+            <div class="botao_atividade">
+                <label for="eatividade">Ativo</label>
+                <input type="checkbox" id="eatividade">
+            </div>
+        </div>
+
+        <form class="formulario">
+            <h2>1° Fatos e Dados</h2>
+      <div class="fatos_e_dados">
+        <div class="form_nome">
+           <label for="enome">Nome</label>
+           <input type="text" name="nome" id="enome" class="inputs" minlength="5" maxlength="25">
+      </div> <!-- fatos e dados ( nome) -->
+
+      
+     
+     
+        <div class="form_email_idade">
+            <div class="idade">
+                <label for="eidade">Idade</label>
+                <input type="number" name="idade" id="eidade" class="inputs" minlength="1" maxlength="3">
+
+            </div>
+            <div class="form_email">
+                <label for="eemail">E-mail</label>
+                <input type="email" name="email" id="eemail" class="inputs" minlength="5" maxlength="25">
+            </div><!-- E-mail -->
+            
+        </div> <!--form email e idade -->
+
+        <div class="form_endereco">
+            <label for="eendereco">Endereço</label>
+            <input type="text" name="endereco" id="eendereco" class="inputs" minlength="5" maxlength="25">
+
+        </div> <!-- endereço -->
+
+        <div class="form_outras_info">
+            <label for="eoutras_info">Outras Informações</label>
+            <input type="text" name="outras_info" id="eoutras_info" class="inputs" minlength="5" maxlength="25">
+
+        </div> <!-- outras informações -->
+      
+
+      </div>          <!-- Encerramento Fatos e dados -->
+
+      <h2>2°Interesses</h2>
+      <section class="interesses">
+        <div class="form_interesses">
+            <input type="text" name="interesses" id="einteresses" minlength="5" maxlength="25">
+        </div>
+        <h2>3°Sentimentos</h2>
+        <section class="sentimentos">
+            <div class="form_sentimentos">
+                <input type="text" name="sentimentos" id="esentimentos" minlength="5" maxlength="25">
+            </div>
+               </section>
+        <h2>4°Valores</h2>
+        <section class="valores">
+            <div class="form_valores">
+                <input type="text" name="valores" id="evalores" minlength="5" maxlength="25">
+            </div>
+
+        </section>
+
+
+
+        </form>
+        <button class="btnsalvar" onclick="editar(event)">Salvar</button>
+        
+    </section>
+   </main>
+   <script src="../javascript/script.js"></script>
+</body>
+</html>

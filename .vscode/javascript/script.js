@@ -13,6 +13,17 @@
  const botaoativo = document.querySelector('#iatividade')
  const btncadastro = document.querySelector('#btnovo_colaborador')
  const pesquisar= document.querySelector(".pesquisar")
+ const editnome = document.querySelector('#enome')
+ const editidade = document.querySelector('#eidade')
+ const editemail = document.querySelector('#eemail')
+ const editendereco = document.querySelector('#eendereco')
+ const editoutrasinfos = document.querySelector('#eoutras_info')
+ const editinteresses = document.querySelector('#einteresses')
+ const editsentimentos = document.querySelector('#esentimentos')
+ const editvalores = document.querySelector('#evalores')
+ const editstatus = document.querySelector('#eatividade')
+ const btnalterar=document.querySelector('.btnsalvar')
+
 
 
  
@@ -58,7 +69,7 @@ function validarCampos(event){
 }
     //Criação de um usuário por meio do formulário
 async function criarUsuario (){
-debugger
+
     let valorFname = formname.value
     let valorFidade = formidade.value
     let valorFemail = formemail.value
@@ -67,7 +78,7 @@ debugger
     let valorFinteresses = forminteresses.value
     let valorFsentimentos = formsentimentos.value
     let valorFvalor = formvalores.value
-    let valorAtivo =  botaoativo.checked?true:false
+    let valorAtivo =  botaoativo.checked?1:0
     
 
     if ( valorFname == "" || valorFidade =="" || valorFemail == "" ){
@@ -84,7 +95,7 @@ debugger
     nome:valorFname,
      idade:valorFidade ,
      email:valorFemail ,
-     endereco:valorFendereco,
+     endereço:valorFendereco,
      outrasInfos:valorFoutrasinfo ,
      interesses:valorFinteresses,
      sentimentos:valorFsentimentos ,
@@ -94,6 +105,7 @@ debugger
  }
 
 try{
+   
    const response = await fetch(`https://localhost:7034/api/Colaboradores`, {
    method : 'POST',
    headers : {
@@ -109,9 +121,6 @@ alert ('Usuário Criado !')
 } catch(error){
    console.error('Erro ao cadastrar colaborador', error) 
 }
-
-
-
 }
 //  const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
 //  colaboradores.push(colaborador)
@@ -133,14 +142,129 @@ function criarLista (colaborador){
                 </p>
                    </button>
                     </div>`
-        
+  const btnexcluir=item.querySelector("#lixeira")
+  btnexcluir.addEventListener("click",(event)=>{
+         event.preventDefault
+         excluir(colaborador)
+         item.remove()
+  })
+
+  const btneditar=item.querySelector("#editar")
+  btneditar.addEventListener("click",(event)=>{
+         event.preventDefault
+       redirecionaredit(colaborador)  
+  })
+  
+
+
    lista.appendChild(item)
 }
+async function excluir(colaborador){
+   
+try{
+ const response = await fetch(`https://localhost:7034/api/Colaboradores/${colaborador.colaboradorId}`, {
+  method:'DELETE',
+ });
+if (!response.ok){
+   throw new Error(error)
+}
+alert('Usuário Excluido!')
+}
+catch(error)
+{
+   console.error('Erro ao excluir Colaborador', error)
+}
 
+}
+async function editar(event){
+ debugger
+   event.preventDefault()
+   let url = new URL(window.location.href)
+   const parametro = url.searchParams;
+   let Id = Number.parseInt(parametro.get("id"))
+   let colaboradorId = Id
+
+   let nome = editnome.value
+   let idade = Number.parseInt(editidade.value)
+   let email = editemail.value
+   let endereço = editendereco.value
+   let outrasInfos = editoutrasinfos.value
+   let interesses = editinteresses.value
+   let sentimentos = editsentimentos.value
+   let valores = editvalores.value
+   let status = editstatus.checked?1:0
+   const colaborador = {
+      colaboradorId,
+      nome ,
+      idade,
+      email ,
+      endereço ,
+      outrasInfos ,
+      interesses,
+      sentimentos ,
+      valores,
+      status 
+   }
+
+   try{
+      const response = await fetch(`https://localhost:7034/api/Colaboradores/${Id}`, {
+       method:'PUT',
+       headers : {
+         'Content-Type':'application/json'
+      },
+       body: JSON.stringify(colaborador),   
+      });
+     if (!response.ok){
+        throw new Error(error || 'Erro de edição')
+     }
+     alert('Usuário Editado!')
+     }
+     catch(error)
+     {
+        console.error('Erro ao editar Colaborador', error)
+     }
+     window.location.href="../cadastropage/cadastro.html"
+
+     
+}
+async function carregaredit(){
+   
+   const url = new URL(window.location.href)
+   const parametro = url.searchParams;
+   let id = Number.parseInt(parametro.get("id"))
+ try{
+  const resposta = await fetch(`https://localhost:7034/api/Colaboradores/${id}`)
+  if(!resposta.ok){
+   throw new Error(error || 'Erro de edição')
+  }
+  const colaborador = await resposta.json()
+      editnome.value = colaborador.nome
+      editidade.value = colaborador.idade
+      editemail.value = colaborador.email
+      editendereco.value = colaborador.endereço
+      editoutrasinfos.value = colaborador.outrasInfos
+      editinteresses.value = colaborador.interesses
+      editsentimentos .value = colaborador.sentimentos
+     editvalores.value = colaborador.valores
+     editstatus.value = colaborador.status
+ }
+ catch(error){
+   console.error('Erro ao editar Colaborador', error)
+ }
+}
+
+function redirecionaredit(colaborador) {
+
+   id = colaborador.colaboradorId
+  window.location.href="../edit_page/editpage.html?id=" + id
+    
+}
+  
+ 
 // Comando para percorrer e pegar cada array para ser colocado na lista 
 async function carregarLista(){
    // const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
-   var response = await fetch ("https://localhost:7034/api/Colaboradores")
+   var response = await fetch ("https://localhost:7034/api/Colaboradores/")
    var colaboradores = await response.json()
    colaboradores.forEach(colaborador => criarLista(colaborador) );
 }
@@ -150,26 +274,28 @@ async function carregar(){
    totalCadastro()
 }
 // Comando para exibir o número de  presentes num  grupo por determinada característica 
-function totalCadastro(){
-   const total= document.querySelector("#total")
-   const vazio= document.querySelector("#pendente")
-   const ativos= document.querySelector("#ativos")
-   const colaboradores =  JSON.parse(localStorage.getItem('colaboradores'))
-   let numeroColaboradores= colaboradores.length
+async function totalCadastro(){
+   var response = await fetch("https://localhost:7034/api/Colaboradores")
+   var colaboradores = await response.json()
    let pendentes=0;
-   // Per corre cada array e verifica suas informações e conta o número de colaboradores com informações pendentes
    colaboradores.forEach(itens=>{
-      if(itens.valorFendereco==""||itens.valorFoutrasinfo==""||itens.valorFsentimentos==""|| itens.valorFvalor==""){
-         pendentes = pendentes+1;      
+      if(itens.endereço==""||itens.outrasInfos==""||itens.sentimentos==""|| itens.valores==""){
+         pendentes = pendentes+1;   
 }
 
    });
+   const totalcolaboradores = colaboradores.length
+   const colaboradortotalativo=colaboradores.filter(item => item.status == 1).length
+   const totalpendentes = pendentes
+   const total= document.querySelector("#total")
+   const vazio= document.querySelector("#pendente")
+   const ativos= document.querySelector("#ativos")
    // Atribuindo valores para as devidas variáveis 
-   const cadastroAtivo=colaboradores.filter(itens=> itens.valorAtivo==true)
-   let cadastrosAtivos= cadastroAtivo.length
-   vazio.innerHTML=pendentes;
-   total.innerHTML= numeroColaboradores;
-   ativos.innerHTML= cadastrosAtivos
+  
+   
+   vazio.innerHTML=totalpendentes;
+   total.innerHTML= totalcolaboradores;
+   ativos.innerHTML=colaboradortotalativo;
 }
 // Comando de funcionalidade na barra de pesquisa 
 async function pesquisarInput(){ 
@@ -194,6 +320,10 @@ if (response.status == 200){
    const obj = await(response.json());
    console.log(obj);
 }
+}
+function clicou(event){
+   event.preventDefault()
+   alert('clicou')
 }
 
 
