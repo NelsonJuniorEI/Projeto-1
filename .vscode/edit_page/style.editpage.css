@@ -38,6 +38,14 @@ main{
     background-color:var(--azulclaro3);
     font-family: var(--font-padrao);
 }
+
+
+form.formulario{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
 section.cabecalho{
     background-color:var(--azulescuro2) ;
     text-align: center;
@@ -70,7 +78,9 @@ section.form_cadastros{
     overflow-y: auto;
     font-family: var(--font-padrao);
     box-shadow: 1px 1px 6px black;
+
 }
+
 section.form_cadastros > div#titulo{
     display: flex;
     flex-direction: row;
@@ -121,15 +131,17 @@ section.form_cadastros > div#rel_cada > ul{
 }
 form {
     width:98%;
-    height:1024px;
+    height:1150px;
     padding:15px 15px;
     position:relative;
+    padding-top:0px;
 }
 form.formulario > h2{
     margin: 15px;
     padding: 10px;
     border-bottom: 1px solid #176B87;
     color: rgb(0, 0, 0);
+    width: 94%;
 }
 form.formulario > div.fatos_e_dados{
     width: 100%;
@@ -186,6 +198,7 @@ div.form_sentimentos > input{
     height: 96px;
 }
 section.valores{
+    
     width: 100%;
    
 }
@@ -198,13 +211,12 @@ div.form_valores> input{
 }
 div.form_bottom{
     width: 100%;
-    height: 50px;
-   
+    height: 50px; 
     position: absolute;
 }
 button.btnsalvar{
     width: 234px;
-    height:39px ;
+    height:39px;
     font-family: var(--font-destaque);
     background-color:var(--azulescuro2);
     text-align: center;
@@ -229,4 +241,7 @@ div.botao_atividade > input#iatividade{
     height: 15px;
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.29);
+}
+input{
+    padding: 4px;
 }

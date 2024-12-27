@@ -231,7 +231,7 @@ section.info_cadastros{
 }
 
 section.info_cadastros > div#rel_cada > h2 > input:hover{
-    background-color:#67fc3eb5;
+    background-color:#46a72bb7;
     transition-duration: 0.4s ;
 }
  section.info_cadastros > div#rel_cada > h2{
