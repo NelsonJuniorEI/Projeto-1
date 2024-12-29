@@ -198,9 +198,7 @@ div.form_sentimentos > input{
     height: 96px;
 }
 section.valores{
-    
     width: 100%;
-   
 }
 div.form_valores{
     padding: 10px;
@@ -221,15 +219,14 @@ button.btnsalvar{
     background-color:var(--azulescuro2);
     text-align: center;
     text-shadow: 1px 1px 3px black;
-    position:absolute;
-    bottom: 5px;
-    right: 39%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     color: rgb(255, 255, 255);
     box-shadow: 1px 1px 3px black;
     font-size: 1.3em;
+    margin-top: 30px;
+    margin-left: 220px;
 }
 button.btnsalvar:hover{
     background-color:#0a3252 ;

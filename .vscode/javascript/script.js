@@ -28,25 +28,26 @@
 
  
  
-//  Variável com informação para login
+//  login infos
  const usuario = {
     nome:"junin@gmail.com",
     senha: 123
  }
-//  Dando funcionalidade de coletar as informações do colaborador no botão gravar
+//  botão criar usuário
  btgravar.addEventListener("click", (event) =>{
     event.preventDefault() 
      criarUsuario ()
 
  } )
 
-    // Redirecionamento para página relatório 
+    // Redirecionamento relatório 
 function ir(){
    window.location.href="../form_relatoriopage/form_rel.html"
 }
  
-    // validação da entrada na página de login
+    // validação de login
 function validarCampos(event){
+   
     event.preventDefault()
     let valorEmail = email.value 
     let valorSenha = senha.value 
@@ -67,7 +68,7 @@ function validarCampos(event){
    } else {alert("Senha ou E-mail inválidos!")}
 
 }
-    //Criação de um usuário por meio do formulário
+    // formulário
 async function criarUsuario (){
 
     let valorFname = formname.value
@@ -122,13 +123,8 @@ alert ('Usuário Criado !')
    console.error('Erro ao cadastrar colaborador', error) 
 }
 }
-//  const colaboradores = JSON.parse(localStorage.getItem("colaboradores"))||[];
-//  colaboradores.push(colaborador)
-//  Aviso de que o usuário já está criado (consequentemente armazenado no local storage)
-// localStorage.setItem("colaboradores" , JSON.stringify(colaboradores))
-// alert('usuário criado')
 
-// Comando para criar lista do colaborador ( com comando para quebrar e abreviar grandes nomes)
+// lista do colaborador
 function criarLista (colaborador){
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
@@ -159,6 +155,7 @@ function criarLista (colaborador){
 
    lista.appendChild(item)
 }
+//excluir
 async function excluir(colaborador){
    
 try{
@@ -176,6 +173,7 @@ catch(error)
 }
 
 }
+//editar
 async function editar(event){
  
    event.preventDefault()
@@ -227,6 +225,7 @@ async function editar(event){
 
      
 }
+//carrega usuário editado
 async function carregaredit(){
    
    const url = new URL(window.location.href)
@@ -252,7 +251,7 @@ async function carregaredit(){
    console.error('Erro ao editar Colaborador', error)
  }
 }
-
+//redireciona para editpage
 function redirecionaredit(colaborador) {
 
    id = colaborador.colaboradorId
@@ -260,33 +259,30 @@ function redirecionaredit(colaborador) {
     
 }
   
- 
-// Comando para percorrer e pegar cada array para ser colocado na lista 
 async function carregarLista(){
    // const colaboradores = JSON.parse(localStorage.getItem('colaboradores'))||[]
    var response = await fetch ("https://localhost:7034/api/Colaboradores/")
    var colaboradores = await response.json()
    colaboradores.forEach(colaborador => criarLista(colaborador) );
-}
-// Comando para recarregar a lista 
+} 
 async function carregar(){
    carregarLista()
    totalCadastro()
 }
-// Comando para exibir o número de  presentes num  grupo por determinada característica 
 async function totalCadastro(){
+   
    var response = await fetch("https://localhost:7034/api/Colaboradores")
    var colaboradores = await response.json()
-   let pendentes=0;
+   let pendente = 0;
    colaboradores.forEach(itens=>{
-      if(itens.endereço==""||itens.outrasInfos==""||itens.sentimentos==""|| itens.valores==""){
-         pendentes = pendentes+1;   
-}
+      if (itens.endereço=="" || itens.outrasInfos=="" || itens.sentimentos=="" || itens.valores==""){
+         pendente = pendente+1;
+      }
 
    });
    const totalcolaboradores = colaboradores.length
    const colaboradortotalativo=colaboradores.filter(item => item.status == 1).length
-   const totalpendentes = pendentes
+   const totalpendentes = pendente
    const total= document.querySelector("#total")
    const vazio= document.querySelector("#pendente")
    const ativos= document.querySelector("#ativos")
@@ -297,7 +293,6 @@ async function totalCadastro(){
    total.innerHTML= totalcolaboradores;
    ativos.innerHTML=colaboradortotalativo;
 }
-// Comando de funcionalidade na barra de pesquisa 
 async function pesquisarInput(){ 
    const lista = document.querySelector(".lista-colaborador")
    const response = await fetch ("https://localhost:7034/api/Colaboradores")
@@ -310,7 +305,6 @@ async function pesquisarInput(){
       }
    })
 }
-// Função para imprimir a lista 
 function imprimir(){
    window.print()
 }
@@ -321,6 +315,7 @@ if (response.status == 200){
    console.log(obj);
 }
 }
+
 
 
 
