@@ -24,10 +24,6 @@ const editvalores = document.querySelector('#evalores')
 const editstatus = document.querySelector('#eatividade')
 const btnalterar = document.querySelector('.btnsalvar')
 
-
-
-
-
 //  login infos
 const usuario = {
    nome: "junin@gmail.com",
@@ -38,7 +34,6 @@ const usuario = {
 btgravar.addEventListener("click", (event) => {
    event.preventDefault()
    criarUsuario()
-
 })
 
 // Redirecionamento relatório 
@@ -65,8 +60,8 @@ function validarCampos(event) {
       window.location.href = "../homepage/home.html"
 
    } else { alert("Senha ou E-mail inválidos!") }
-
 }
+
 // formulário
 async function criarUsuario() {
    let valorFname = formname.value
@@ -97,12 +92,10 @@ async function criarUsuario() {
       sentimentos: valorFsentimentos,
       valores: valorFvalor,
       status: valorAtivo
-
    }
 
    try {
-
-      const response = await fetch(`https://localhost:7034/api/Colaboradores`, {
+      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores`, {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'
@@ -146,15 +139,12 @@ function criarLista(colaborador) {
       redirecionaredit(colaborador)
    })
 
-
-
    lista.appendChild(item)
 }
 //excluir
 async function excluir(colaborador) {
-
    try {
-      const response = await fetch(`https://localhost:7034/api/Colaboradores/${colaborador.colaboradorId}`, {
+      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores/${colaborador.colaboradorId}`, {
          method: 'DELETE',
       });
       if (!response.ok) {
@@ -182,7 +172,7 @@ async function editar(event) {
    let interesses = editinteresses.value
    let sentimentos = editsentimentos.value
    let valores = editvalores.value
-   let status = editstatus.checked ? 1 : 0
+   let status = editstatus.checked;
    const colaborador = {
       colaboradorId,
       nome,
@@ -197,7 +187,7 @@ async function editar(event) {
    }
 
    try {
-      const response = await fetch(`https://localhost:7034/api/Colaboradores/${Id}`, {
+      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores/${Id}`, {
          method: 'PUT',
          headers: {
             'Content-Type': 'application/json'
@@ -222,7 +212,7 @@ async function carregaredit() {
    let id = Number.parseInt(parametro.get("id"))
 
    try {
-      const resposta = await fetch(`https://localhost:7034/api/Colaboradores/${id}`)
+      const resposta = await fetch(`https://localhost:52884/api/v1/Colaboradores/${id}`)
       if (!resposta.ok) {
          throw new Error(error || 'Erro de edição')
       }
@@ -235,7 +225,7 @@ async function carregaredit() {
       editinteresses.value = colaborador.interesses
       editsentimentos.value = colaborador.sentimentos
       editvalores.value = colaborador.valores
-      editstatus.value = colaborador.status
+      editstatus.checked = colaborador.status
    }
    catch (error) {
       console.error('Erro ao editar Colaborador', error)
@@ -249,7 +239,7 @@ function redirecionaredit(colaborador) {
 }
 
 async function carregarLista() {
-   var response = await fetch("https://localhost:7034/api/Colaboradores/")
+   var response = await fetch("https://localhost:52884/api/v1/Colaboradores/")
    var colaboradores = await response.json()
    colaboradores.forEach(colaborador => criarLista(colaborador));
 }
@@ -260,7 +250,7 @@ async function carregar() {
 }
 
 async function totalCadastro() {
-   var response = await fetch("https://localhost:7034/api/Colaboradores")
+   var response = await fetch("https://localhost:52884/api/v1/Colaboradores")
    var colaboradores = await response.json()
    let pendente = 0;
    colaboradores.forEach(itens => {
@@ -283,7 +273,7 @@ async function totalCadastro() {
 
 async function pesquisarInput() {
    const lista = document.querySelector(".lista-colaborador")
-   const response = await fetch("https://localhost:7034/api/Colaboradores")
+   const response = await fetch("https://localhost:52884/api/v1/Colaboradores")
    const colaboradores = await response.json()
    let valor = pesquisar.value.toLowerCase()
    lista.innerHTML = ""
@@ -299,7 +289,7 @@ function imprimir() {
 }
 
 async function deletar() {
-   const response = await fetch('https://localhost:7034/api/Colaboradores');
+   const response = await fetch('https://localhost:52884/api/v1/Colaboradores');
    if (response.status == 200) {
       const obj = await (response.json());
       console.log(obj);

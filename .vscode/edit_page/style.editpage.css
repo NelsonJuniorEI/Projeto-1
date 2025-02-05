@@ -1,29 +1,30 @@
 @charset "UTF-8";
 
-:root{
+:root {
     --azulclaro: #DFF2EB;
-    --azulescuro:#4A628A;
-    --azulclaro2:#B9E5E8;
-    --azulnormal:#7AB2D3;
+    --azulescuro: #4A628A;
+    --azulclaro2: #B9E5E8;
+    --azulnormal: #7AB2D3;
     --verdeclaro: #9DDE8B;
-    --roxoclaro:#A594F9;
-    --roxocinza:#CDC1FF;
+    --roxoclaro: #A594F9;
+    --roxocinza: #CDC1FF;
 
     /* cor adicional */
-    --azulclaro3:#EEF5FF;
+    --azulclaro3: #EEF5FF;
     --azulnormal2: #B4D4FF;
-    --azulsolido:#86B6F6;
-    --azulescuro2:#176B87;
+    --azulsolido: #86B6F6;
+    --azulescuro2: #176B87;
 
     --font-padrao: "Open Sans", sans-serif;
     --font-destaque: "Lexend", sans-serif;
-
 }
-*{
+
+* {
     padding: 0px;
     margin: 0px;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -32,22 +33,22 @@ body{
     justify-content: center;
 }
 
-main{
+main {
     height: 45%;
     width: 45%;
-    background-color:var(--azulclaro3);
+    background-color: var(--azulclaro3);
     font-family: var(--font-padrao);
 }
 
-
-form.formulario{
+form.formulario {
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
 }
-section.cabecalho{
-    background-color:var(--azulescuro2) ;
+
+section.cabecalho {
+    background-color: var(--azulescuro2);
     text-align: center;
     padding: 20px;
     margin: 9px 1%;
@@ -56,19 +57,20 @@ section.cabecalho{
     justify-content: space-between;
     border-radius: 10px;
     box-shadow: 1px 1px 4px black
+}
 
-}
-section.cabecalho > input{
+section.cabecalho>input {
     padding: 7px;
-    width:45%;
+    width: 45%;
 }
-section.form_cadastros{
+
+section.form_cadastros {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width:96.7%;
-    height:80vh;
+    transform: translate(-50%, -50%);
+    width: 96.7%;
+    height: 80vh;
     background-color: white;
     margin: 9px 1%;
     margin-top: 10px;
@@ -76,12 +78,12 @@ section.form_cadastros{
     position: relative;
     padding: 15px 15px;
     overflow-y: auto;
+    overflow-x: hidden;
     font-family: var(--font-padrao);
     box-shadow: 1px 1px 6px black;
-
 }
 
-section.form_cadastros > div#titulo{
+section.form_cadastros>div#titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,13 +91,14 @@ section.form_cadastros > div#titulo{
     background-color: var(--azulescuro2);
     padding: 20px;
     color: white;
-   font-size: 25px;
+    font-size: 25px;
     text-shadow: 1px 1px 6px black;
     margin: -15px;
     padding: 30px;
     width: 41vw;
-} 
-section.form_cadastros > div#rel_cada > h2{
+}
+
+section.form_cadastros>div#rel_cada>h2 {
     padding: 20px;
     text-align: left;
     margin-bottom: 10px;
@@ -103,7 +106,8 @@ section.form_cadastros > div#rel_cada > h2{
     padding-left: 20px;
     border-bottom: 1px solid black;
 }
-section.form_cadastros > div#rel_cada > h2 > input {
+
+section.form_cadastros>div#rel_cada>h2>input {
     margin-left: 90%;
     margin-bottom: 40px;
     color: white;
@@ -112,111 +116,133 @@ section.form_cadastros > div#rel_cada > h2 > input {
     font-size: 0.8em;
 }
 
-section.form_cadastros > div#rel_cada > ul {
+section.form_cadastros>div#rel_cada>ul {
     padding: 20px;
     list-style: none;
     font-size: 1.2em;
 
 }
 
-section.form_cadastros > div#rel_cada > ul > li{
+section.form_cadastros>div#rel_cada>ul>li {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 1px 0px;
-     
+
 }
-section.form_cadastros > div#rel_cada > ul{
+
+section.form_cadastros>div#rel_cada>ul {
     text-align: center;
 }
+
 form {
-    width:98%;
-    height:1150px;
-    padding:15px 15px;
-    position:relative;
-    padding-top:0px;
+    width: 98%;
+    height: 1150px;
+    padding: 15px 15px;
+    position: relative;
+    padding-top: 0px;
 }
-form.formulario > h2{
+
+form.formulario>h2 {
     margin: 15px;
     padding: 10px;
     border-bottom: 1px solid #176B87;
     color: rgb(0, 0, 0);
     width: 94%;
 }
-form.formulario > div.fatos_e_dados{
+
+form.formulario>div.fatos_e_dados {
     width: 100%;
     font-size: 1.3em;
 }
-div.fatos_e_dados > div.form_nome {
+
+div.fatos_e_dados>div.form_nome {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    
+
 }
-div.fatos_e_dados .inputs{
+
+div.fatos_e_dados .inputs {
     width: 100%;
     height: 36px;
 }
+
 div.form_email_idade {
     display: flex;
     gap: 20px;
     padding: 10px;
 }
-div.form_email{
+
+div.form_email {
     width: 100%;
 }
-div.form_endereco{
+
+div.form_endereco {
     padding: 10px;
 }
-div.form_outras_info{
+
+div.form_outras_info {
     padding: 10px;
 }
-section.interesses{
+
+section.interesses {
     width: 100%;
 }
-section.interesses > h2{
+
+section.interesses>h2 {
     border-bottom: 1px solid #176B87;
     padding: 10px;
     margin: 15px;
 }
-div.form_interesses{
+
+div.form_interesses {
     padding: 10px;
 }
-div.form_interesses > input{
-    width:100% ;
+
+div.form_interesses>input {
+    width: 100%;
     height: 96px;
 }
-section.sentimentos{
+
+section.sentimentos {
     width: 100%;
-    
+
 }
-div.form_sentimentos{
+
+div.form_sentimentos {
     padding: 10px;
 }
-div.form_sentimentos > input{
-    width:100% ;
+
+div.form_sentimentos>input {
+    width: 100%;
     height: 96px;
 }
-section.valores{
+
+section.valores {
     width: 100%;
 }
-div.form_valores{
+
+div.form_valores {
     padding: 10px;
 }
-div.form_valores> input{
-    width:100% ;
+
+div.form_valores>input {
+    width: 100%;
     height: 96px;
 }
-div.form_bottom{
+
+div.form_bottom {
     width: 100%;
-    height: 50px; 
+    height: 50px;
     position: absolute;
 }
-button.btnsalvar{
+
+button.btnsalvar {
     width: 234px;
-    height:39px;
+    height: 39px;
     font-family: var(--font-destaque);
-    background-color:var(--azulescuro2);
+    background-color: var(--azulescuro2);
     text-align: center;
     text-shadow: 1px 1px 3px black;
     border: none;
@@ -228,17 +254,20 @@ button.btnsalvar{
     margin-top: 30px;
     margin-left: 220px;
 }
-button.btnsalvar:hover{
-    background-color:#0a3252 ;
+
+button.btnsalvar:hover {
+    background-color: #0a3252;
     transition-duration: 0.3s;
-    
+
 }
-div.botao_atividade > input#iatividade{
+
+div.botao_atividade>input#iatividade {
     width: 15px;
     height: 15px;
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.29);
 }
-input{
+
+input {
     padding: 4px;
 }
