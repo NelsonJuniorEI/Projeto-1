@@ -77,6 +77,9 @@ nav{
     border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+    padding-left: 10px;
  }
  div.menu > ul > li#home_icone:hover{
     background-color: #b4d5ff80;

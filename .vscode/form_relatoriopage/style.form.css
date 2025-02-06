@@ -1,29 +1,31 @@
 @charset "UTF-8";
 
-:root{
+:root {
     --azulclaro: #DFF2EB;
-    --azulescuro:#4A628A;
-    --azulclaro2:#B9E5E8;
-    --azulnormal:#7AB2D3;
+    --azulescuro: #4A628A;
+    --azulclaro2: #B9E5E8;
+    --azulnormal: #7AB2D3;
     --verdeclaro: #9DDE8B;
-    --roxoclaro:#A594F9;
-    --roxocinza:#CDC1FF;
+    --roxoclaro: #A594F9;
+    --roxocinza: #CDC1FF;
 
     /* cor adicional */
-    --azulclaro3:#EEF5FF;
+    --azulclaro3: #EEF5FF;
     --azulnormal2: #B4D4FF;
-    --azulsolido:#86B6F6;
-    --azulescuro2:#176B87;
+    --azulsolido: #86B6F6;
+    --azulescuro2: #176B87;
 
     --font-padrao: "Open Sans", sans-serif;
     --font-destaque: "Lexend", sans-serif;
 
 }
-*{
+
+* {
     padding: 0px;
     margin: 0px;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,102 +33,118 @@ body{
     align-items: center;
     justify-content: center;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
-nav{
+
+nav {
     height: 1024px;
     width: 20%;
-    background-image: linear-gradient(to top,#86B6F6, #176B87 );
-    font-family:var(--font-padrao) ;
+    background-image: linear-gradient(to top, #86B6F6, #176B87);
+    font-family: var(--font-padrao);
 }
- div.logo{
+
+div.logo {
     margin: auto;
     margin-top: 57%;
     padding: 20px;
     width: 218px;
-    background-color:white;
+    background-color: white;
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 6px black;
     font-family: var(--font-destaque);
-    
- }
- div.logo > p{
+
+}
+
+div.logo>p {
     padding-left: 10px;
     margin-left: 10px;
-   
- }
- div.menu {
+
+}
+
+div.menu {
     margin-top: 50px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
-  
-   
- }
- div.menu > ul {
+    justify-content: space-around;
+
+
+}
+
+div.menu>ul {
     display: flex;
     justify-content: start;
     flex-direction: column;
     align-items: start;
     list-style: none;
-    
 
-     
- }
- div.menu > ul > li{
+
+
+}
+
+div.menu>ul>li {
+    border-bottom: 1px solid #CDC1FF;
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: 1px solid #CDC1FF;
     width: 100%;
     margin-right: 80px;
- }
- div.menu > ul > li#home_icone:hover{
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+    padding-left: 10px;
+}
+
+div.menu>ul>li#home_icone:hover {
     background-color: #b4d5ff80;
-   border-radius: 5px; 
-   transition-duration: 0.6s;
+    border-radius: 5px;
+    transition-duration: 0.6s;
 }
-div.menu > ul > li#cadastro_icone:hover{
-   background-color: #b4d5ff80;
-  border-radius: 5px; 
-  transition-duration: 0.6s;
+
+div.menu>ul>li#cadastro_icone:hover {
+    background-color: #b4d5ff80;
+    border-radius: 5px;
+    transition-duration: 0.6s;
 }
-div.menu > ul > li#relatorios_icone:hover{
-   background-color: #b4d5ff80;
-  border-radius: 5px; 
-  transition-duration: 0.6s;
+
+div.menu>ul>li#relatorios_icone:hover {
+    background-color: #b4d5ff80;
+    border-radius: 5px;
+    transition-duration: 0.6s;
 }
- div.menu > ul > svg{
+
+div.menu>ul>svg {
     margin-right: 10px;
     font-size: 2em;
     width: 40px;
     padding: 5px;
     margin-right: 10px;
     color: white;
- }
- div.menu > ul > li > a{
+}
+
+div.menu>ul>li>a {
     display: block;
     padding: 10px;
     text-decoration: none;
     font-size: 1.2em;
     color: white;
     text-shadow: 1px 1px 4px black;
- }
- 
- 
-main{
+}
+
+
+main {
     height: 100%;
     width: 80%;
-    background-color:var(--azulclaro3);
+    background-color: var(--azulclaro3);
     font-family: var(--font-padrao);
 }
-section.cabecalho{
-    background-color:var(--azulescuro2) ;
+
+section.cabecalho {
+    background-color: var(--azulescuro2);
     text-align: center;
     padding: 20px;
     margin: 9px 1%;
@@ -135,15 +153,16 @@ section.cabecalho{
     justify-content: space-between;
     border-radius: 10px;
     box-shadow: 1px 1px 4px black
-
 }
-section.cabecalho > input{
+
+section.cabecalho>input {
     padding: 7px;
-    width:45%;
+    width: 45%;
 
-   
+
 }
-div#usuario_logo{
+
+div#usuario_logo {
     height: 50px;
     width: 50px;
     background-color: rgba(197, 197, 197, 0.842);
@@ -152,29 +171,33 @@ div#usuario_logo{
     display: inline-block;
     margin-left: 252px;
 }
-div#usuario_logo > svg{
+
+div#usuario_logo>svg {
     display: flex;
     width: 51px;
     height: 41px;
     margin-top: 4px;
- 
- }
-div#nomeusu{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 11%;
-  margin-left: 15px;
-  font-family: var(--font-padrao);
-  font-size: 1.1em;
-  font-weight: bold;
+
 }
-section.cabecalho > div#sair{
-    width: 13%; 
+
+div#nomeusu {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11%;
+    margin-left: 15px;
+    font-family: var(--font-padrao);
+    font-size: 1.1em;
+    font-weight: bold;
 }
-section.cabecalho > div#sair > a{
-   
+
+section.cabecalho>div#sair {
+    width: 13%;
+}
+
+section.cabecalho>div#sair>a {
+
     font-size: 1.4em;
     background-color: #176B87;
     color: rgb(255, 255, 255);
@@ -189,13 +212,15 @@ section.cabecalho > div#sair > a{
     margin: 10px;
 
 }
-section.cabecalho > div#sair > a:hover{
-   background-color: #1d8baf;
-   border: 1px solid white;
-   transition-duration: 0.4s;
+
+section.cabecalho>div#sair>a:hover {
+    background-color: #1d8baf;
+    border: 1px solid white;
+    transition-duration: 0.4s;
 }
-section.cabecalho > div#barra{
-    background-color:var(--azulnormal);
+
+section.cabecalho>div#barra {
+    background-color: var(--azulnormal);
     width: 5px;
     height: 40px;
     border-radius: 7px;
@@ -204,31 +229,36 @@ section.cabecalho > div#barra{
     margin-right: 20px;
     box-shadow: 1px 1px 4px black;
 }
-section.form_cadastros{
-    width:96.7%;
-    height:80vh;
+
+section.form_cadastros {
+    width: 96.8%;
+    height: 90vh;
     background-color: white;
-    margin: 9px 1%;
     margin-top: 10px;
     border-radius: 10px;
     position: relative;
-    padding: 15px 15px;
+    padding: 15px 5px;
     overflow-y: auto;
     font-family: var(--font-padrao);
-    box-shadow: 1px 1px 6px black;
+    box-shadow: 1px 1px 4px black;
+    margin: 17px;
+
 }
-section.form_cadastros > div#titulo{
+
+section.form_cadastros>div#titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: var(--azulescuro2);
-    padding: 20px;
+    padding: 35px;
+    padding-right: 32px;
     color: white;
     text-shadow: 1px 1px 6px black;
     margin: -20px;
-} 
-section.form_cadastros > div#rel_cada > h2{
+}
+
+section.form_cadastros>div#rel_cada>h2 {
     padding: 20px;
     text-align: left;
     margin-bottom: 10px;
@@ -236,7 +266,8 @@ section.form_cadastros > div#rel_cada > h2{
     padding-left: 20px;
     border-bottom: 1px solid black;
 }
-section.form_cadastros > div#rel_cada > h2 > input {
+
+section.form_cadastros>div#rel_cada>h2>input {
     margin-left: 90%;
     margin-bottom: 40px;
     color: white;
@@ -245,168 +276,196 @@ section.form_cadastros > div#rel_cada > h2 > input {
     font-size: 0.8em;
 }
 
-section.form_cadastros > div#rel_cada > ul {
+section.form_cadastros>div#rel_cada>ul {
     padding: 20px;
     list-style: none;
     font-size: 1.2em;
 
 }
 
-section.form_cadastros > div#rel_cada > ul > li{
+section.form_cadastros>div#rel_cada>ul>li {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 1px 0px;
-     
+
 }
-section.form_cadastros > div#rel_cada > ul{
+
+section.form_cadastros>div#rel_cada>ul {
     text-align: center;
 }
+
 form {
-    width:98%;
-    height:1024px;
-    padding:15px 15px;
-    position:relative;
+    width: 98%;
+    height: 1024px;
+    padding: 15px 15px;
+    position: relative;
 }
-form.formulario > h2{
+
+form.formulario>h2 {
     margin: 15px;
     padding: 10px;
     border-bottom: 1px solid #176B87;
     color: rgb(0, 0, 0);
 }
-form.formulario > div.fatos_e_dados{
+
+form.formulario>div.fatos_e_dados {
     width: 100%;
 }
-div.fatos_e_dados > div.form_nome {
+
+div.fatos_e_dados>div.form_nome {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-div.fatos_e_dados .inputs{
+
+div.fatos_e_dados .inputs {
     width: 100%;
     height: 36px;
 }
+
 div.form_email_idade {
     display: flex;
     gap: 20px;
     padding: 10px;
 }
-div.form_email{
+
+div.form_email {
     width: 100%;
 }
-div.form_endereco{
+
+div.form_endereco {
     padding: 10px;
 }
-div.form_outras_info{
+
+div.form_outras_info {
     padding: 10px;
 }
-section.interesses{
+
+section.interesses {
     width: 100%;
 }
-section.interesses > h2{
+
+section.interesses>h2 {
     border-bottom: 1px solid #176B87;
     padding: 10px;
     margin: 15px;
 }
-div.form_interesses{
+
+div.form_interesses {
     padding: 10px;
 }
-div.form_interesses > input{
-    width:100% ;
-    height: 96px;
-}
-section.sentimentos{
+
+div.form_interesses>input {
     width: 100%;
-    
-}
-div.form_sentimentos{
-    padding: 10px;
-}
-div.form_sentimentos > input{
-    width:100% ;
     height: 96px;
 }
-section.valores{
+
+section.sentimentos {
     width: 100%;
-   
+
 }
-div.form_valores{
+
+div.form_sentimentos {
     padding: 10px;
 }
-div.form_valores> input{
-    width:100% ;
+
+div.form_sentimentos>input {
+    width: 100%;
     height: 96px;
 }
-div.form_bottom{
+
+section.valores {
+    width: 100%;
+
+}
+
+div.form_valores {
+    padding: 10px;
+}
+
+div.form_valores>input {
+    width: 100%;
+    height: 96px;
+}
+
+div.form_bottom {
     width: 100%;
     height: 50px;
-   
+
     position: absolute;
 }
-input.btgravar{
+
+input.btgravar {
     width: 234px;
-    height:39px ;
-    background-color:var(--azulescuro2);
+    height: 39px;
+    background-color: var(--azulescuro2);
     text-align: center;
     text-shadow: 1px 1px 3px black;
-    position:absolute;
+    position: absolute;
     bottom: 5px;
-    right: 39%;
+    right: 44%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     color: rgb(255, 255, 255);
     box-shadow: 1px 1px 3px black;
     font-size: 1.3em;
+    margin-top: 10px;
+    transition: 0.4s;
 }
-input.btgravar:hover{
-    background-color:#0a3252 ;
+
+input.btgravar:hover {
+    background-color: #0a3252;
     transition-duration: 0.3s;
-    
 }
-div.botao_atividade{
+
+div.botao_atividade {
     flex-direction: row;
+    font-size: 1.2em;
 }
-div.botao_atividade > input#iatividade{
+
+div.botao_atividade>input#iatividade {
     width: 15px;
     height: 15px;
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.29);
 }
-#lixeira{
+
+#lixeira {
     margin: 5px;
     background-color: rgba(224, 224, 224, 0.514);
-    border:1.2px solid rgba(0, 0, 0, 0.301) ;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
+    border: 1.2px solid rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404);
     border-radius: 4px;
     cursor: pointer;
-   
-   }
-   #lixeira:hover{
-     
-       background-color: rgba(163, 163, 163, 0.356);
-       border:1.3px solid rgba(0, 0, 0, 0.863) ;
-       border-radius: 4px;
-       transition-duration: 0.2s;
-       cursor: pointer;
-      
-      }
-   #editar{
-       margin: 5px;
-       background-color: rgba(224, 224, 224, 0.514);
-       border:1.2px solid rgba(0, 0, 0, 0.301) ;
-       box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404) ;
-       border-radius: 4px;
-       cursor: pointer;
-      }
-      #editar:hover{
-       background-color: rgba(163, 163, 163, 0.356);
-       border:1.3px solid rgba(0, 0, 0, 0.863) ;
-       border-radius: 4px;
-       transition-duration: 0.2s;
-       cursor: pointer;
-      
-      }
-   
 
+}
 
+#lixeira:hover {
+
+    background-color: rgba(163, 163, 163, 0.356);
+    border: 1.3px solid rgba(0, 0, 0, 0.863);
+    border-radius: 4px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+}
+
+#editar {
+    margin: 5px;
+    background-color: rgba(224, 224, 224, 0.514);
+    border: 1.2px solid rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#editar:hover {
+    background-color: rgba(163, 163, 163, 0.356);
+    border: 1.3px solid rgba(0, 0, 0, 0.863);
+    border-radius: 4px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+}
