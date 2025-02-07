@@ -87,7 +87,7 @@ section.form_cadastros>div#titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--azulescuro2);
     padding: 20px;
     color: white;
@@ -95,7 +95,6 @@ section.form_cadastros>div#titulo {
     text-shadow: 1px 1px 6px black;
     margin: -15px;
     padding: 30px;
-    width: 41vw;
 }
 
 section.form_cadastros>div#rel_cada>h2 {
@@ -270,4 +269,32 @@ div.botao_atividade>input#iatividade {
 
 input {
     padding: 4px;
+}
+
+#t {
+    margin-right: 350px;
+}
+
+#btnsair>#out>a>svg {
+    height: -webkit-fill-available;
+}
+
+#btnsair>#out>a>svg:hover {
+    background-color: #718eaf;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-style: none;
+    transition: 0.3s;
+}
+
+#out {
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: #5081af;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-style: none;
+
 }

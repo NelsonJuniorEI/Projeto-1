@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
 nav {
     height: 1024px;
     width: 20%;
-    background-image: linear-gradient(to top, #86B6F6, #176B87);
+    background-color: var(--azulescuro2);
     font-family: var(--font-padrao);
 }
 
@@ -149,15 +149,15 @@ section.cabecalho {
     padding: 20px;
     margin: 9px 1%;
     display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
+    justify-content: space-between;  
     box-shadow: 1px 1px 4px black;
 }
 
 section.cabecalho>input {
     padding: 7px;
-    width: 45%;
+    width: 44.5%;
     margin: 0px;
+    border-radius: 10px;
 }
 
 div#usuario_logo {
@@ -189,33 +189,6 @@ div#nomeusu {
     font-family: var(--font-padrao);
     font-size: 1.1em;
     font-weight: bold;
-}
-
-section.cabecalho>div#sair {
-    width: 13%;
-}
-
-section.cabecalho>div#sair>a {
-
-    font-size: 1.4em;
-    background-color: #176B87;
-    color: rgb(255, 255, 255);
-    border: 1px solid rgba(255, 255, 255, 0.693);
-    cursor: pointer;
-    padding: 5px;
-    text-decoration: none;
-    margin: auto;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-
-}
-
-section.cabecalho>div#sair>a:hover {
-    background-color: #1d8baf;
-    border: 1px solid white;
-    transition-duration: 0.4s;
 }
 
 section.cabecalho>div#barra {
@@ -336,21 +309,68 @@ section.ultimo_cadastros>div#rel_cada>ul>li:hover {
 
 #editar {
     margin: 5px;
-    background-color: rgba(224, 224, 224, 0.514);
-    border: 1.2px solid rgba(0, 0, 0, 0.301);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404);
-    border-radius: 4px;
-    cursor: pointer;
+   background-color: rgba(86, 255, 109, 0.514);
+   border: 1.2px solid rgba(0, 0, 0, 0.301);
+   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.404);
+   border-radius: 4px;
+   cursor: pointer;
 }
 
 #editar:hover {
-    background-color: rgba(163, 163, 163, 0.356);
+    background-color:  rgb(55, 245, 80);
     border: 1.3px solid rgba(0, 0, 0, 0.863);
     border-radius: 4px;
     transition-duration: 0.2s;
     cursor: pointer;
 }
+#lup{
+    margin-left: 15.2px;
+    height: 33px;
+    margin-top: 9px;
+ }
 
 li#list {
     margin-left: 10px;
 }
+
+#lup{
+    margin-top: 5px;
+   margin-left: 3px;
+   margin-left: 15px;
+    height: 33px;
+    margin-top: 9px;
+ }
+
+ .pesquisar{
+    height: 50px;
+     border-radius: 10px;
+     border: none;
+     margin-top: 2px;
+ }
+ 
+ section.cabecalho > div#sair > a{
+  background: rgb(255, 255, 255); 
+  border-radius: 10px; 
+  color: #176B87; 
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 28px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+ }
+
+ section.cabecalho > div#sair > a:hover{
+   background-color: rgba(233, 233, 233, 0.918);
+   transition: 0.5s;
+   }
+  
+   
+    
+     
+     
+    

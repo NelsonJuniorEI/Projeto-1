@@ -72,7 +72,7 @@ async function criarUsuario() {
    let valorFinteresses = forminteresses.value
    let valorFsentimentos = formsentimentos.value
    let valorFvalor = formvalores.value
-   let valorAtivo = botaoativo.checked ? 1 : 0
+   let valorAtivo = !!botaoativo.checked
    if (valorFname == "" || valorFidade == "" || valorFemail == "") {
       alert("Preencha os campos de E-mail, idade e nome!")
       formname.focus()
@@ -107,6 +107,7 @@ async function criarUsuario() {
          throw new Error(error.mensage || 'Erro de cadastro')
       }
       alert('Usuário Criado !')
+      window.location.href = 'http://127.0.0.1:5501/.vscode/cadastropage/cadastro.html';
    } catch (error) {
       console.error('Erro ao cadastrar colaborador', error)
    }

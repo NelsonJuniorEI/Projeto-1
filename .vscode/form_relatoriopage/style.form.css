@@ -467,5 +467,9 @@ div.botao_atividade>input#iatividade {
     border-radius: 4px;
     transition-duration: 0.2s;
     cursor: pointer;
-
 }
+
+#lup{
+    margin-top: 5px;
+    margin-left: 3px;
+ }
