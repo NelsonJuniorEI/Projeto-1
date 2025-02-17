@@ -24,11 +24,16 @@ const editvalores = document.querySelector('#evalores')
 const editstatus = document.querySelector('#eatividade')
 const btnalterar = document.querySelector('.btnsalvar')
 
+
 //  login infos
-const usuario = {
-   nome: "junin@gmail.com",
-   senha: 123
-}
+// async function login(){
+// try{
+//    const response  = await fetch(`https://localhost:52884/login?`);
+//    if(!)
+//       throw new Error ('Erro na requisição');
+// }
+   
+// var colaboradores = await response.json()
 
 //  botão criar usuário
 btgravar.addEventListener("click", (event) => {
@@ -42,12 +47,15 @@ function ir() {
 }
 
 // validação de login
-function validarCampos(event) {
+
+async function validarCampos(event) {
    event.preventDefault()
    let valorEmail = email.value
    let valorSenha = senha.value
 
-   if (valorEmail == "" || valorSenha == "") {
+   try{
+      const response  = await fetch(`https://localhost:52884/api/v1/Colaboradores`);
+      if (valorEmail == "" || valorSenha == "") {
       alert("Por favor preencha os campos de E-mail e Senha")
       return;
    }
@@ -55,6 +63,11 @@ function validarCampos(event) {
       alert("Por favor, utilize '@' e '.com' no seu campo de E-mail")
       return;
    }
+   }
+   catch(error){
+      console.error('Erroao efetuar login', error)
+   }
+   
    if (valorEmail == usuario.nome && valorSenha == usuario.senha) {
 
       window.location.href = "../homepage/home.html"
