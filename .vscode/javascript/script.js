@@ -32,7 +32,7 @@ const btnalterar = document.querySelector('.btnsalvar')
 //    if(!)
 //       throw new Error ('Erro na requisição');
 // }
-   
+
 // var colaboradores = await response.json()
 
 //  botão criar usuário
@@ -53,9 +53,7 @@ async function validarCampos(event) {
    let valorEmail = email.value
    let valorSenha = senha.value
 
-   try{
-      const response  = await fetch(`https://localhost:52884/api/v1/Colaboradores`);
-      if (valorEmail == "" || valorSenha == "") {
+   if (valorEmail == "" || valorSenha == "") {
       alert("Por favor preencha os campos de E-mail e Senha")
       return;
    }
@@ -63,16 +61,24 @@ async function validarCampos(event) {
       alert("Por favor, utilize '@' e '.com' no seu campo de E-mail")
       return;
    }
-   }
-   catch(error){
-      console.error('Erroao efetuar login', error)
-   }
-   
-   if (valorEmail == usuario.nome && valorSenha == usuario.senha) {
+   try {
+      const colaborador = {
+         email: valorEmail,
+         password: valorSenha
+      }
 
-      window.location.href = "../homepage/home.html"
+      const resposta = await fetch(`https://localhost:52884/api/v1/Authentification/login`, {
+         method: 'POST',
+         body: JSON.stringify(colaborador)
+      })
 
-   } else { alert("Senha ou E-mail inválidos!") }
+      console.log(resposta);
+
+   }
+   catch {
+      console.error("login inválido.");
+   }
+   // window.location.href = "../homepage/home.html"
 }
 
 // formulário
