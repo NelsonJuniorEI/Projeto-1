@@ -143,6 +143,7 @@ section.cabecalho {
    display: flex;
    justify-content: space-between;
    box-shadow: 1px 1px 4px black;
+   padding-bottom: 19px;
 }
 
 section.cabecalho>input {

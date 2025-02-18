@@ -40,7 +40,7 @@ nav {
     height: 1024px;
     ;
     width: 20%;
-    background-image: linear-gradient(to top, #86B6F6, #176B87);
+   background-color:#176B87 ;
     font-family: var(--font-padrao);
 }
 

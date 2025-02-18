@@ -67,18 +67,27 @@ async function validarCampos(event) {
          password: valorSenha
       }
 
-      const resposta = await fetch(`https://localhost:52884/api/v1/Authentification/login`, {
+      const resposta = await fetch(`https://localhost:52884/api/v1/Authentication/login`, {
          method: 'POST',
+         headers: {
+            'Content-Type': 'application/json',
+         },
          body: JSON.stringify(colaborador)
       })
 
-      console.log(resposta);
+      if (!resposta.ok) {
+         const erro = await resposta.text();
+         throw new Error(erro);
+      }
 
+      const token = await resposta.text();
+
+      localStorage.setItem('token', token);
+      window.location.href = "../homepage/home.html"
    }
    catch {
       console.error("login inválido.");
    }
-   // window.location.href = "../homepage/home.html"
 }
 
 // formulário
@@ -259,7 +268,12 @@ function redirecionaredit(colaborador) {
 }
 
 async function carregarLista() {
-   var response = await fetch("https://localhost:52884/api/v1/Colaboradores/")
+   const token = localStorage.getItem('token');
+   var response = await fetch("https://localhost:52884/api/v1/Colaboradores/", {
+      headers: {
+         'Authorization': `Bearer ${token}`
+      }
+   })
    var colaboradores = await response.json()
    colaboradores.forEach(colaborador => criarLista(colaborador));
 }
@@ -270,7 +284,12 @@ async function carregar() {
 }
 
 async function totalCadastro() {
-   var response = await fetch("https://localhost:52884/api/v1/Colaboradores")
+   const token = localStorage.getItem('token');
+   var response = await fetch("https://localhost:52884/api/v1/Colaboradores", {
+      headers: {
+         'Authorization': `Bearer ${token}`
+      }
+   })
    var colaboradores = await response.json()
    let pendente = 0;
    colaboradores.forEach(itens => {
