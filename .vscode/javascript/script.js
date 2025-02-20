@@ -25,20 +25,11 @@ const editstatus = document.querySelector('#eatividade')
 const btnalterar = document.querySelector('.btnsalvar')
 
 
-//  login infos
-// async function login(){
-// try{
-//    const response  = await fetch(`https://localhost:52884/login?`);
-//    if(!)
-//       throw new Error ('Erro na requisição');
-// }
-
-// var colaboradores = await response.json()
 
 //  botão criar usuário
 btgravar.addEventListener("click", (event) => {
    event.preventDefault()
-   criarUsuario()
+   criarUsuario(colaborador)
 })
 
 // Redirecionamento relatório 
@@ -67,7 +58,7 @@ async function validarCampos(event) {
          password: valorSenha
       }
 
-      const resposta = await fetch(`https://localhost:52884/api/v1/Authentication/login`, {
+      const resposta = await fetch(`https://localhost:7268/api/v1/Users/login`, {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',
@@ -75,12 +66,8 @@ async function validarCampos(event) {
          body: JSON.stringify(colaborador)
       })
 
-      if (!resposta.ok) {
-         const erro = await resposta.text();
-         throw new Error(erro);
-      }
-
-      const token = await resposta.text();
+      const data = await resposta.json()
+      const token = data.resultData.token;
 
       localStorage.setItem('token', token);
       window.location.href = "../homepage/home.html"
@@ -122,12 +109,35 @@ async function criarUsuario() {
       status: valorAtivo
    }
 
+   // async function excluir(Id) {
+   //    const token = localStorage.getItem('token');
+   //    try {
+   //       const response = await fetch(`https://localhost:7268/api/v1/Collaborators`, {
+   //          headers: {
+   //             'Authorization': `Bearer ${token}`,
+   //             'Content-Type': 'application/json' 
+   //          },
+   //          method: 'DELETE',
+   //          body: JSON.stringify({ id: Number(Id) }) 
+   //       });
+   //       if (!response.ok) {
+   //          throw new Error(error)
+   //       }
+   //       alert('Usuário Excluido!')
+   //       carregar()
+   //    }
+   //    catch (error) {
+   //       console.error('Erro ao excluir Colaborador', error)
+   //    }
+   // }
+   const token = localStorage.getItem('token');
    try {
-      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores`, {
-         method: 'POST',
+      const response = await fetch(`https://localhost:7268/api/v1/Collaborator`, {
          headers: {
+            'Authorization': `Bearer${token}`,
             'Content-Type': 'application/json'
          },
+         method: 'POST',
          body: JSON.stringify(colaborador),
       });
       if (!response.ok) {
@@ -145,6 +155,7 @@ async function criarUsuario() {
 function criarLista(colaborador) {
    const lista = document.querySelector(".lista-colaborador")
    const item = document.createElement("li")
+   item.classList.add(colaborador.id)
    item.innerHTML = `<p><abbr title="${colaborador.nome}">${colaborador.nome}</abbr> </p> <p><abbr title="${colaborador.email}">${colaborador.email}</abbr> </p> <p>${colaborador.status ? "Ativo" : "Inativo"}  </p> 
          <div id="btns">
             <button id="editar">
@@ -156,9 +167,11 @@ function criarLista(colaborador) {
                    </button>
                     </div>`
    const btnexcluir = item.querySelector("#lixeira")
+
    btnexcluir.addEventListener("click", (event) => {
-      event.preventDefault
-      excluir(colaborador)
+      event.preventDefault()
+      const value = item.classList.value
+      excluir(value)
       item.remove()
    })
 
@@ -171,15 +184,22 @@ function criarLista(colaborador) {
    lista.appendChild(item)
 }
 //excluir
-async function excluir(colaborador) {
+async function excluir(Id) {
+   const token = localStorage.getItem('token');
    try {
-      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores/${colaborador.colaboradorId}`, {
+      const response = await fetch(`https://localhost:7268/api/v1/Collaborators`, {
+         headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json' 
+         },
          method: 'DELETE',
+         body: JSON.stringify({ id: Number(Id) }) 
       });
       if (!response.ok) {
          throw new Error(error)
       }
       alert('Usuário Excluido!')
+      carregar()
    }
    catch (error) {
       console.error('Erro ao excluir Colaborador', error)
@@ -216,7 +236,7 @@ async function editar(event) {
    }
 
    try {
-      const response = await fetch(`https://localhost:52884/api/v1/Colaboradores/${Id}`, {
+      const response = await fetch(`https://localhost:7268/api/v1/Collaborators/${Id}`, {
          method: 'PUT',
          headers: {
             'Content-Type': 'application/json'
@@ -231,6 +251,7 @@ async function editar(event) {
    catch (error) {
       console.error('Erro ao editar Colaborador', error)
    }
+
    window.location.href = "../cadastropage/cadastro.html"
 }
 
@@ -241,7 +262,7 @@ async function carregaredit() {
    let id = Number.parseInt(parametro.get("id"))
 
    try {
-      const resposta = await fetch(`https://localhost:52884/api/v1/Colaboradores/${id}`)
+      const resposta = await fetch(`https://localhost:7268/api/v1/Collaborators/${id}`)
       if (!resposta.ok) {
          throw new Error(error || 'Erro de edição')
       }
@@ -267,30 +288,20 @@ function redirecionaredit(colaborador) {
    window.location.href = "../edit_page/editpage.html?id=" + id
 }
 
+//exemplo
 async function carregarLista() {
    const token = localStorage.getItem('token');
-   var response = await fetch("https://localhost:52884/api/v1/Colaboradores/", {
+   var response = await fetch("https://localhost:7268/api/v1/Collaborators", {
       headers: {
          'Authorization': `Bearer ${token}`
-      }
+      },
+      method: 'GET'
    })
-   var colaboradores = await response.json()
+   var data = await response.json()
+   const colaboradores = data.data;
+
    colaboradores.forEach(colaborador => criarLista(colaborador));
-}
 
-async function carregar() {
-   carregarLista()
-   totalCadastro()
-}
-
-async function totalCadastro() {
-   const token = localStorage.getItem('token');
-   var response = await fetch("https://localhost:52884/api/v1/Colaboradores", {
-      headers: {
-         'Authorization': `Bearer ${token}`
-      }
-   })
-   var colaboradores = await response.json()
    let pendente = 0;
    colaboradores.forEach(itens => {
       if (itens.endereço == "" || itens.outrasInfos == "" || itens.sentimentos == "" || itens.valores == "") {
@@ -310,9 +321,14 @@ async function totalCadastro() {
    ativos.innerHTML = colaboradortotalativo;
 }
 
+async function carregar() {
+   carregarLista()
+   totalCadastro()
+}
+
 async function pesquisarInput() {
    const lista = document.querySelector(".lista-colaborador")
-   const response = await fetch("https://localhost:52884/api/v1/Colaboradores")
+   const response = await fetch("https://localhost:7268/api/v1/Collaborators/ObterColaborado")
    const colaboradores = await response.json()
    let valor = pesquisar.value.toLowerCase()
    lista.innerHTML = ""
@@ -320,23 +336,13 @@ async function pesquisarInput() {
       if (colaborador.nome.toLowerCase().includes(valor)) {
          criarLista(colaborador)
       }
+
+
+
    })
 }
 
 function imprimir() {
    window.print()
 }
-
-async function deletar() {
-   const response = await fetch('https://localhost:52884/api/v1/Colaboradores');
-   if (response.status == 200) {
-      const obj = await (response.json());
-      console.log(obj);
-   }
-}
-
-
-
-
-
 
