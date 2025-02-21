@@ -23,13 +23,11 @@ const editsentimentos = document.querySelector('#esentimentos')
 const editvalores = document.querySelector('#evalores')
 const editstatus = document.querySelector('#eatividade')
 const btnalterar = document.querySelector('.btnsalvar')
-
-
-
+let collaborators;
 //  botão criar usuário
 btgravar.addEventListener("click", (event) => {
    event.preventDefault()
-   criarUsuario(colaborador)
+   criarUsuario()
 })
 
 // Redirecionamento relatório 
@@ -109,40 +107,18 @@ async function criarUsuario() {
       status: valorAtivo
    }
 
-   // async function excluir(Id) {
-   //    const token = localStorage.getItem('token');
-   //    try {
-   //       const response = await fetch(`https://localhost:7268/api/v1/Collaborators`, {
-   //          headers: {
-   //             'Authorization': `Bearer ${token}`,
-   //             'Content-Type': 'application/json' 
-   //          },
-   //          method: 'DELETE',
-   //          body: JSON.stringify({ id: Number(Id) }) 
-   //       });
-   //       if (!response.ok) {
-   //          throw new Error(error)
-   //       }
-   //       alert('Usuário Excluido!')
-   //       carregar()
-   //    }
-   //    catch (error) {
-   //       console.error('Erro ao excluir Colaborador', error)
-   //    }
-   // }
    const token = localStorage.getItem('token');
    try {
-      const response = await fetch(`https://localhost:7268/api/v1/Collaborator`, {
+      const response = await fetch(`https://localhost:7268/api/v1/Collaborators`, {
          headers: {
-            'Authorization': `Bearer${token}`,
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
          },
          method: 'POST',
          body: JSON.stringify(colaborador),
       });
       if (!response.ok) {
-         const error = await response.json()
-         throw new Error(error.mensage || 'Erro de cadastro')
+         throw new Error(error)
       }
       alert('Usuário Criado !')
       window.location.href = 'http://127.0.0.1:5501/.vscode/cadastropage/cadastro.html';
@@ -190,10 +166,10 @@ async function excluir(Id) {
       const response = await fetch(`https://localhost:7268/api/v1/Collaborators`, {
          headers: {
             'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json'
          },
          method: 'DELETE',
-         body: JSON.stringify({ id: Number(Id) }) 
+         body: JSON.stringify({ id: Number(Id) })
       });
       if (!response.ok) {
          throw new Error(error)
@@ -235,12 +211,14 @@ async function editar(event) {
       status
    }
 
+   const token = localStorage.getItem('token');
    try {
       const response = await fetch(`https://localhost:7268/api/v1/Collaborators/${Id}`, {
-         method: 'PUT',
          headers: {
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
          },
+         method: 'PUT',
          body: JSON.stringify(colaborador),
       });
       if (!response.ok) {
@@ -251,7 +229,6 @@ async function editar(event) {
    catch (error) {
       console.error('Erro ao editar Colaborador', error)
    }
-
    window.location.href = "../cadastropage/cadastro.html"
 }
 
@@ -297,9 +274,12 @@ async function carregarLista() {
       },
       method: 'GET'
    })
-   var data = await response.json()
-   const colaboradores = data.data;
 
+   var data = await response.json()
+
+   collaborators = data.data;
+
+   const colaboradores = data.data;
    colaboradores.forEach(colaborador => criarLista(colaborador));
 
    let pendente = 0;
@@ -325,21 +305,24 @@ async function carregar() {
    carregarLista()
    totalCadastro()
 }
+//terminar(erro na requisição da API)
+function pesquisarInput() {
+   let valor = document.querySelector(".pesquisar").value.toLowerCase();
 
-async function pesquisarInput() {
-   const lista = document.querySelector(".lista-colaborador")
-   const response = await fetch("https://localhost:7268/api/v1/Collaborators/ObterColaborado")
-   const colaboradores = await response.json()
-   let valor = pesquisar.value.toLowerCase()
-   lista.innerHTML = ""
-   colaboradores.forEach(colaborador => {
-      if (colaborador.nome.toLowerCase().includes(valor)) {
-         criarLista(colaborador)
-      }
+   const items = document.querySelectorAll(".lista-colaborador li");
 
+   items.forEach(item => {
+      const itemId = item.classList[0];
 
+      if (!itemId) return;
 
-   })
+      const colaborador = collaborators.find(c => c.id == Number(itemId));
+
+      if (colaborador && colaborador.nome.toLowerCase().includes(valor))
+         item.style.display = 'flex';
+      else
+         item.style.display = 'none';
+   });
 }
 
 function imprimir() {
